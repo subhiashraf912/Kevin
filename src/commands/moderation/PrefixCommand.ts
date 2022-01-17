@@ -2,7 +2,6 @@ import { Message } from "discord.js";
 import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
-import PrefixesConfiguration from "../../utils/types/Data/PrefixesConfiguration";
 
 export default class TestCommand extends BaseCommand {
   constructor() {
@@ -20,11 +19,7 @@ export default class TestCommand extends BaseCommand {
     const guildId = message.guildId!;
     if (!args[0]) return message.reply("Enter a prefix, dumbass!!");
     const prefix = args[0];
-    const config = (await client.database.models.prefixes.findOneAndUpdate({
-      guildId,
-      prefix,
-    })) as PrefixesConfiguration;
-    client.configurations.prefixes.set(guildId, config.prefix);
-    message.reply("Change prefix thing");
+    await client.configurations.prefixes.update(guildId, prefix);
+    message.reply(`The prefix has been set to ${prefix}`);
   }
 }

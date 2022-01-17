@@ -11,7 +11,7 @@ export default class DiscordClient extends Client {
   private _prefix: string = "!";
   utils = new ClientUtils();
   database = new Database(process.env.MONGO_DB!);
-  configurations = new ClientConfiguration();
+  configurations = new ClientConfiguration(this);
   constructor(options: ClientOptions) {
     super(options);
   }
