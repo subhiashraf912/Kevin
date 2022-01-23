@@ -1,4 +1,3 @@
-import { PermissionString } from "discord.js";
 import PermissionsGuard from "../../../classes/Guard/PermissionsGuard";
 import CommandCategory from "./CommandCategories";
 

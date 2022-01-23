@@ -1,11 +1,12 @@
 import { registerCommands, registerEvents } from "./utils/registry";
 import config from "../slappey.json";
 import DiscordClient from "./classes/Client/Client";
-import { Intents } from "discord.js";
 import dotenv from "dotenv";
+import intents from "./utils/ClientIntents";
 dotenv.config();
+
 const client = new DiscordClient({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  intents: intents,
 });
 
 (async () => {

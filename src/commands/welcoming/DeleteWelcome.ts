@@ -3,11 +3,11 @@ import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 
-export default class TestCommand extends BaseCommand {
+export default class DeleteWelcome extends BaseCommand {
   constructor() {
     super({
-      name: "prefix",
-      category: "Moderators",
+      name: "delete-welcome",
+      category: "Welcoming",
       permissions: new PermissionsGuard({
         userPermissions: ["ADMINISTRATOR"],
         botPermissions: [],
@@ -17,9 +17,11 @@ export default class TestCommand extends BaseCommand {
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
     const guildId = message.guildId!;
-    if (!args[0]) return message.reply("Enter a prefix, dumbass!!");
-    const prefix = args[0];
-    await client.configurations.prefixes.update(guildId, prefix);
-    message.reply(`The prefix has been set to ${prefix}`);
+    try {
+      await client.configurations.welcomes.delete(guildId);
+      message.reply(`> Welcomes system has been deleted successfully.`);
+    } catch {
+      message.reply(`> There's no welcome system for this server.`);
+    }
   }
 }
