@@ -35,3 +35,9 @@ client.on("voiceStateUpdate", (oldState, newState) => {
     }
   } catch {}
 });
+
+setInterval(async () => {
+  try {
+    await fetch("https://uh.subhiashraf912.repl.co/");
+  } catch {}
+}, 5000);
