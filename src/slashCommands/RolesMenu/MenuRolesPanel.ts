@@ -89,6 +89,12 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
           type: "ROLE",
           required: false,
         },
+        {
+          name: "image-link",
+          description: "The embed image link, you can pass it here.",
+          type: "STRING",
+          required: false,
+        },
       ],
     });
   }
@@ -104,6 +110,7 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
     let minimumRoles = interaction.options.getNumber("minimum-roles");
     let maximumRoles = interaction.options.getNumber("maximum-roles");
     let requiredRole = interaction.options.getRole("required-role");
+    let embedImageLink = interaction.options.getString("image-link") || "";
     const guildData = await client.database.models.menuRoles.findOne({
       guildId: interaction.guildId,
       menuCustomId,
@@ -139,6 +146,7 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
       .setThumbnail(
         interaction.guild?.iconURL({ dynamic: true, size: 4096 }) || ""
       )
+      .setImage(embedImageLink)
       .setColor(color as ColorResolvable);
 
     interaction.followUp({ content: "Sent", ephemeral: true });
