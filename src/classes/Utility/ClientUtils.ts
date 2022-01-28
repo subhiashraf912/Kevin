@@ -1,9 +1,11 @@
 import { PermissionString } from "discord.js";
 import DiscordClient from "../Client/Client";
+import pagination from "./Pagination";
 import WelcomeCardGenerator from "./WelcomeCardGenerator";
 
 class ClientUtils {
   client;
+  pagination = pagination;
   constructor(client: DiscordClient) {
     this.client = client;
   }

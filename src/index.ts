@@ -1,6 +1,7 @@
 import {
   registerCommands,
   registerEvents,
+  registerSlashCommands,
   // registerWebSocketEvents,
 } from "./utils/registry";
 import config from "../slappey.json";
@@ -17,6 +18,7 @@ const client = new DiscordClient({
   client.prefix = config.prefix || client.prefix;
   await registerCommands(client, "../commands");
   await registerEvents(client, "../events");
+  await registerSlashCommands(client, "../slashCommands");
   // await registerWebSocketEvents(client, "../WebSocketEvents");
   await client.database.init();
   await client.login(process.env.BOT_TOKEN);

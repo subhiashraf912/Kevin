@@ -7,6 +7,8 @@ import ClientConfiguration from "./ClientConfigurationsManager";
 import DisTube from "distube";
 import InviteTracker from "djs-invite-tracker";
 import { DisTubeEvents } from "distube";
+import { io } from "socket.io-client";
+import BaseSlashCommand from "../Base/BaseSlashCommand";
 
 declare module "discord.js" {
   interface ClientEvents extends DisTubeEvents {}
@@ -14,12 +16,14 @@ declare module "discord.js" {
 export default class DiscordClient extends Client {
   private _commands = new Collection<string, BaseCommand>();
   private _events = new Collection<string, BaseEvent>();
+  private _slashCommands = new Collection<string, BaseSlashCommand>();
   private _prefix: string = "!";
   utils = new ClientUtils(this);
   database = new Database(process.env.MONGO_DB!);
   configurations = new ClientConfiguration(this);
   distube = new DisTube(this);
   invites = new InviteTracker(this).init();
+  wss = io(process.env.WEB_SOCKET!);
 
   constructor(options: ClientOptions) {
     super(options);
@@ -41,5 +45,8 @@ export default class DiscordClient extends Client {
 
   set prefix(prefix: string) {
     this._prefix = prefix;
+  }
+  get slashCommands(): Collection<string, BaseSlashCommand> {
+    return this._slashCommands;
   }
 }
