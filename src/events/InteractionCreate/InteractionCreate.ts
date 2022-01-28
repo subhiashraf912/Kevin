@@ -57,9 +57,21 @@ export default class MessageEvent extends BaseEvent {
       const guildId = interaction.guildId!;
       const guild = interaction.guild!;
       const guildCustomMenuId = interaction.customId.split("_")[1];
+      const requiredRoleId = interaction.customId.split("_")[2];
       if (guild) {
         const member = guild.members.cache.get(memberId as string);
         if (member) {
+          const rr = guild.roles.cache.get(requiredRoleId);
+          if (requiredRoleId && rr) {
+            const r = member.roles.cache.get(requiredRoleId);
+            if (!r) {
+              interaction.reply({
+                content: `You need ${rr.toString()} role to access the roles in this menu.`,
+                ephemeral: true,
+              });
+              return;
+            }
+          }
           const values = interaction.values;
           const removedRoles: string[] = [];
           const addedRoles: Role[] = [];

@@ -82,6 +82,13 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
           type: "NUMBER",
           required: false,
         },
+        {
+          name: "required-role",
+          description:
+            "If you want a role to be required for members to gain the following roles.",
+          type: "ROLE",
+          required: false,
+        },
       ],
     });
   }
@@ -96,7 +103,7 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
     const color = interaction.options.getString("color") || "DEFAULT";
     let minimumRoles = interaction.options.getNumber("minimum-roles");
     let maximumRoles = interaction.options.getNumber("maximum-roles");
-
+    let requiredRole = interaction.options.getRole("required-role");
     const guildData = await client.database.models.menuRoles.findOne({
       guildId: interaction.guildId,
       menuCustomId,
@@ -119,7 +126,7 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
     });
 
     const selectMenu = new MessageSelectMenu()
-      .setCustomId(`menuroles_${menuCustomId}`)
+      .setCustomId(`menuroles_${menuCustomId}_${requiredRole?.id || ""}`)
       .addOptions(options);
     if (minimumRoles && minimumRoles <= 0) minimumRoles = 1;
     if (maximumRoles && maximumRoles <= 0) maximumRoles = 1;
