@@ -78,6 +78,8 @@ export async function registerSlashCommands(
     }
   }
   client.on("ready", (c) => {
+    console.log("________SETTING THE SLASH COMMANDS TO THE CLIENT________");
+    client.guilds.cache.get("783991881028993045")?.commands.set([]);
     client.application?.commands.set(slashCommandsArray);
   });
 }
