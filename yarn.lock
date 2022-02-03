@@ -1454,7 +1454,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-m3u8stream@^0.8.4:
+m3u8stream@^0.8.4, m3u8stream@^0.8.6:
   version "0.8.6"
   resolved "https://registry.npmjs.org/m3u8stream/-/m3u8stream-0.8.6.tgz"
   integrity sha512-LZj8kIVf9KCphiHmH7sbFQTVe4tOemb202fWwvJwR9W5ENW/1hxJN6ksAWGhQgSBSa3jyWhnjKU1Fw1GaOdbyA==
@@ -2527,6 +2527,15 @@ youtube-sr@^4.1.13:
   version "4.1.13"
   resolved "https://registry.npmjs.org/youtube-sr/-/youtube-sr-4.1.13.tgz"
   integrity sha512-25zwQm6VUy1if6LzeE3CxjfIFJe6z9rNgfjQgWVEvlNEvChHrgA8TkzPzHOww4GFJ37kT3mNrqFRjtO1O5298w==
+
+ytdl-core@^4.10.1:
+  version "4.10.1"
+  resolved "https://registry.yarnpkg.com/ytdl-core/-/ytdl-core-4.10.1.tgz#6648d65faca787919181b2cee1be470b2ef9fdcb"
+  integrity sha512-idBhW+e7HCzs5fR5cqp7Ci+mJhEch41YAaWabYlneQFCL6IGf6Hycv99yVx01Zl1Ci0t/70faOelMSrXaQTE/A==
+  dependencies:
+    m3u8stream "^0.8.6"
+    miniget "^4.0.0"
+    sax "^1.1.3"
 
 zod@^3.11.6:
   version "3.11.6"

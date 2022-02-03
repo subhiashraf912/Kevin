@@ -43,8 +43,7 @@ export default class PlayCommand extends BaseCommand {
       textChannel: message.channel.id,
       selfDeafen: true,
     });
-
-    player.connect();
+    if (player.state !== "CONNECTED") player.connect();
     player.queue.add(res.tracks[0]);
 
     if (!player.playing && !player.paused && !player.queue.size) player.play();
