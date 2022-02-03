@@ -41,6 +41,7 @@ export default class PlayCommand extends BaseCommand {
       guild: message.guild?.id!,
       voiceChannel: message.member?.voice.channel.id,
       textChannel: message.channel.id,
+      selfDeafen: true,
     });
 
     player.connect();
