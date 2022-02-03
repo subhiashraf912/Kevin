@@ -11,7 +11,6 @@
     "@discordjs/voice": "^0.7.5",
     "canvas": "^2.9.0",
     "discord.js": "^13.6.0",
-    "distube": "^3.2.0",
     "djs-invite-tracker": "^1.0.3",
     "dotenv": "^14.1.0",
     "erela.js": "^2.3.3",
