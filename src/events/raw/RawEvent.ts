@@ -3,10 +3,10 @@ import DiscordClient from "../../classes/Client/Client";
 
 export default class ReadyEvent extends BaseEvent {
   constructor() {
-    super("ready");
+    //@ts-ignore
+    super("raw");
   }
-  async run(client: DiscordClient) {
-    console.log(`${client.user?.username} has logged in.`);
-    client.erela.init(client.user?.id);
+  async run(client: DiscordClient, data: any) {
+    client.erela.updateVoiceState(data);
   }
 }

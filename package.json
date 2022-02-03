@@ -14,6 +14,7 @@
     "distube": "^3.2.0",
     "djs-invite-tracker": "^1.0.3",
     "dotenv": "^14.1.0",
+    "erela.js": "^2.3.3",
     "ffmpeg-static": "^4.4.1",
     "konva": "^8.3.2",
     "libsodium-wrappers": "^0.7.9",
