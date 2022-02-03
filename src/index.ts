@@ -1,5 +1,6 @@
 import {
   registerCommands,
+  registerErelaEvents,
   registerEvents,
   registerSlashCommands,
   // registerWebSocketEvents,
@@ -19,6 +20,7 @@ const client = new DiscordClient({
   await registerCommands(client, "../commands");
   await registerEvents(client, "../events");
   await registerSlashCommands(client, "../slashCommands");
+  await registerErelaEvents(client, "../erelaEvents");
   // await registerWebSocketEvents(client, "../WebSocketEvents");
   await client.database.init();
   await client.login(process.env.BOT_TOKEN);

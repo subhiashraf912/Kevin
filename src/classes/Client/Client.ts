@@ -8,7 +8,7 @@ import DisTube from "distube";
 import InviteTracker from "djs-invite-tracker";
 import { DisTubeEvents } from "distube";
 import { io } from "socket.io-client";
-import Erela from "erela.js";
+import { Manager } from "erela.js";
 
 import BaseSlashCommand from "../Base/BaseSlashCommand";
 
@@ -31,7 +31,7 @@ export default class DiscordClient extends Client {
   constructor(options: ClientOptions) {
     super(options);
     const client = this;
-    this.erela = new Erela.Manager({
+    this.erela = new Manager({
       nodes: [
         {
           host: "localhost",
@@ -43,27 +43,7 @@ export default class DiscordClient extends Client {
         const guild = client.guilds.cache.get(id);
         if (guild) guild.shard.send(payload);
       },
-    })
-      .on("nodeConnect", (node) =>
-        console.log(`Node ${node.options.identifier} connected`)
-      )
-      .on("nodeError", (node, error) =>
-        console.log(
-          `Node ${node.options.identifier} had an error: ${error.message}`
-        )
-      )
-      .on("trackStart", (player, track) => {
-        (
-          client.channels.cache.get(player.textChannel || "") as TextChannel
-        ).send(`Now playing: ${track.title}`);
-      })
-      .on("queueEnd", (player) => {
-        (
-          client.channels.cache.get(player.textChannel || "") as TextChannel
-        ).send("Queue has ended.");
-
-        player.destroy();
-      });
+    });
 
     this.distube.on("playSong", (q, s) => {
       //@ts-ignore
