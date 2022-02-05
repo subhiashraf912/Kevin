@@ -17,52 +17,61 @@ export default class PlayCommand extends BaseCommand {
   }
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
-    if (!message.member?.voice.channel)
-      return message.reply("You need to join a voice channel.");
-    if (message.guild?.me?.voice.channel) {
-      if (message.guild.me.voice.channel.id !== message.member.voice.channel.id)
-        return message.reply(
-          "You need to be in the same voice channel as the bot to play music."
-        );
-    }
-    if (!args.length)
-      return message.reply("You need to give me a URL or a search term.");
-
-    const search = args.join(" ");
-    let res;
-
     try {
-      res = await client.erela.search(search, message.author);
-    } catch (err: any) {
-      return message.reply(
-        `There was an error while searching: ${err.message}`
-      );
-    }
+      if (!message.member?.voice.channel)
+        return message.reply("You need to join a voice channel.");
+      if (message.guild?.me?.voice.channel) {
+        if (
+          message.guild.me.voice.channel.id !== message.member.voice.channel.id
+        )
+          return message.reply(
+            "You need to be in the same voice channel as the bot to play music."
+          );
+      }
+      if (!args.length && !message.attachments.first())
+        return message.reply("You need to give me a URL or a search term.");
 
-    if (res.loadType === "NO_MATCHES")
-      return message.reply("There was no tracks found with that query.");
-    const player = client.erela.create({
-      guild: message.guild?.id!,
-      voiceChannel: message.member?.voice.channel.id,
-      textChannel: message.channel.id,
-      selfDeafen: true,
-    });
-    if (res.loadType === "LOAD_FAILED") throw res.exception;
+      const search = message.attachments.first()?.url || args.join(" ");
+      let res;
 
-    if (player.state !== "CONNECTED") player.connect();
-    if (res.loadType === "PLAYLIST_LOADED") {
-      res.tracks.forEach((track) => {
-        player.queue.add(track);
+      try {
+        res = await client.erela.search(search, message.author);
+      } catch (err: any) {
+        return message.reply(
+          `There was an error while searching: ${err.message}`
+        );
+      }
+
+      if (res.loadType === "NO_MATCHES")
+        return message.reply("There was no tracks found with that query.");
+      const player = client.erela.create({
+        guild: message.guild?.id!,
+        voiceChannel: message.member?.voice.channel.id,
+        textChannel: message.channel.id,
+        selfDeafen: true,
       });
-    } else {
-      player.queue.add(res.tracks[0]);
-    }
+      if (res.loadType === "LOAD_FAILED") throw res.exception;
 
-    if (!player.playing) player.play();
-    if (res.playlist)
-      return message.reply(
-        `🎵 Enqueuing the playlist \`${res.playlist.name}.\``
-      );
-    else return message.reply(`🎵 Enqueuing \`${res.tracks[0].title}.\``);
+      if (player.state !== "CONNECTED") player.connect();
+      if (res.loadType === "PLAYLIST_LOADED") {
+        res.tracks.forEach((track) => {
+          player.queue.add(track);
+        });
+      } else {
+        player.queue.add(res.tracks[0]);
+      }
+
+      if (!player.playing) player.play();
+      if (res.playlist)
+        return message.reply(
+          `🎵 Enqueuing the playlist \`${res.playlist.name}.\``
+        );
+      else {
+        if (player.queue.size !== 0)
+          return message.reply(`🎵 Enqueuing \`${res.tracks[0].title}.\``);
+      }
+    } catch {
+      message.reply("Error happened, unsupported website");
+    }
   }
 }

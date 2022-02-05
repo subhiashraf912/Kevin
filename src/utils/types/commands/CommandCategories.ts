@@ -1,3 +1,9 @@
-type CommandCategory = "Test" | "Moderators" | "Music" | "Welcoming" | "Utils";
+type CommandCategory =
+  | "Test"
+  | "Moderators"
+  | "Music"
+  | "Welcoming"
+  | "Utils"
+  | "Management";
 
 export default CommandCategory;

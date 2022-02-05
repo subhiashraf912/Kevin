@@ -1,4 +1,4 @@
-import { PermissionString } from "discord.js";
+import { Permissions, PermissionString } from "discord.js";
 import PermissionsGuardOptions from "../../utils/types/guard/PermissionsGuardOptions";
 
 class PermissionsGuard {
@@ -9,16 +9,36 @@ class PermissionsGuard {
     this.botPermissions = options.botPermissions;
   }
 
-  checkMemberPermissions(memberPermissions: PermissionString[]) {
-    return this.userPermissions.every((permission) =>
-      memberPermissions.includes(permission)
-    );
+  checkMemberPermissions(memberPermissions: Readonly<Permissions>) {
+    const missingPermissions: PermissionString[] = [];
+    this.userPermissions.forEach((perm) => {
+      if (!memberPermissions.has(perm)) missingPermissions.push(perm);
+    });
+    return !missingPermissions[0] ? true : false;
   }
 
-  getMissingPermissions(memberPermissions: PermissionString[]) {
-    return this.userPermissions.filter(
-      (perm) => !memberPermissions.includes(perm)
-    );
+  getMissingPermissions(memberPermissions: Readonly<Permissions>) {
+    const missingPermissions: PermissionString[] = [];
+    this.userPermissions.forEach((perm) => {
+      if (!memberPermissions.has(perm)) missingPermissions.push(perm);
+    });
+    return missingPermissions;
+  }
+
+  checkClientPermissions(clientPermissions: Readonly<Permissions>) {
+    const missingPermissions: PermissionString[] = [];
+    this.botPermissions.forEach((perm) => {
+      if (!clientPermissions.has(perm)) missingPermissions.push(perm);
+    });
+    return !missingPermissions[0] ? true : false;
+  }
+
+  getMissingClientPermissions(clientPermissions: Readonly<Permissions>) {
+    const missingPermissions: PermissionString[] = [];
+    this.botPermissions.forEach((perm) => {
+      if (!clientPermissions.has(perm)) missingPermissions.push(perm);
+    });
+    return missingPermissions;
   }
 }
 

@@ -1,12 +1,17 @@
 import { Message } from "discord.js";
 import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
+import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 
 export default class TestCommand extends BaseCommand {
   constructor() {
     super({
       name: "test",
       category: "Test",
+      permissions: new PermissionsGuard({
+        botPermissions: [],
+        userPermissions: [],
+      }),
     });
   }
 

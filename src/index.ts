@@ -23,7 +23,7 @@ const client = new DiscordClient({
   await registerErelaEvents(client, "../erelaEvents");
   // await registerWebSocketEvents(client, "../WebSocketEvents");
   await client.database.init();
-  await client.login(process.env.BOT_TOKEN);
+  await client.login(process.env.TEST_BOT_TOKEN);
 })();
 
 client.on("voiceStateUpdate", (oldState, newState) => {

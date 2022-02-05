@@ -10,7 +10,8 @@ import DiscordClient from "../../classes/Client/Client";
 import Player from "../../classes/Erela/Player";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 import filters from "../../utils/Erela/filters.json";
-import bassboost from "../../utils/Erela/bassboost.json";
+import FiltersString from "../../utils/types/Erela/FiltersString";
+
 export default class FilterCommand extends BaseCommand {
   constructor() {
     super({
@@ -68,109 +69,58 @@ export default class FilterCommand extends BaseCommand {
       time: 120000,
     });
     collector.on("collect", (interaction) => {
-      const filter = interaction.values[0];
+      const filter: FiltersString = interaction.values[0] as FiltersString;
       const guild = interaction.guild!;
-      const player = client.erela.get(guild.id);
+      const player = client.erela.get(guild.id) as Player;
       if (!player)
         return interaction.reply(
           "There's nothing currently playing in the music"
         );
-      switch (filter.toLowerCase()) {
-        case "3d":
-          player.node.send({
-            op: "filters",
-            guildId: guild?.id,
-            equalizer: player.bands.map((gain, index) => {
-              let Obj = {
-                band: 0,
-                gain: 0,
-              };
-              Obj.band = Number(index);
-              Obj.gain = Number(gain);
-              return Obj;
-            }),
-            rotation: {
-              rotationHz: 0.2,
-            },
-          });
-          break;
-        case "nightcore":
-          player.node.send({
-            op: "filters",
-            guildId: message.guild?.id,
-            equalizer: player.bands.map((gain, index) => {
-              var Obj = {
-                band: 0,
-                gain: 0,
-              };
-              Obj.band = Number(index);
-              Obj.gain = Number(gain);
-              return Obj;
-            }),
-            timescale: {
-              speed: 1.165,
-              pitch: 1.125,
-              rate: 1.05,
-            },
-          });
+      switch (filter) {
+        case "8d":
+          //@ts-ignore
+          player.eightD = !player.eightD;
           break;
         case "bassboost":
-          player.set("filter", "🎚 Medium Bass");
-          player.setEQ(...bassboost);
-          player.node.send({
-            op: "filters",
-            guildId: message.guild?.id,
-            equalizer: player.bands.map((gain, index) => {
-              var Obj = {
-                band: 0,
-                gain: 0,
-              };
-              Obj.band = Number(index);
-              Obj.gain = Number(gain);
-              return Obj;
-            }),
-            timescale: {
-              speed: 1.0,
-              pitch: 1.0,
-              rate: 1.0,
-            },
-          });
+          //@ts-ignore
+          player.bassboost = !player.bassboost;
+          break;
+        case "kakaoke":
+          //@ts-ignore
+          player.kakaoke = !player.kakaoke;
+          break;
+        case "nightcore":
+          //@ts-ignore
+          player.nightcore = !player.nightcore;
+          break;
+        case "pop":
+          //@ts-ignore
+          player.pop = !player.pop;
+          break;
+        case "soft":
+          //@ts-ignore
+          player.soft = !player.soft;
+          break;
+        case "treblebass":
+          //@ts-ignore
+          player.treblebass = !player.treblebass;
+          break;
+        case "tremolo":
+          //@ts-ignore
+          player.tremolo = !player.tremolo;
+          break;
+        case "vaporwave":
+          //@ts-ignore
+          player.vaporwave = !player.vaporwave;
+          break;
+        case "vibrato":
+          //@ts-ignore
+          player.vibrato = !player.vibrato;
           break;
       }
       interaction.reply({
-        content: `The reply has been set to: ${filter}`,
+        content: `The ${filter} filter has been toggled`,
       });
     });
-    // const filter = args[0];
-    // if (!filter) return message.reply("Enter the filter");
-    // switch (filter.toLowerCase()) {
-    //   case "8d":
-    //     player.node.send({
-    //       op: "filters",
-    //       guildId: message.guild?.id,
-    //       equalizer: player.bands.map((gain, index) => {
-    //         let Obj = {
-    //           band: 0,
-    //           gain: 0,
-    //         };
-    //         Obj.band = Number(index);
-    //         Obj.gain = Number(gain);
-    //         return Obj;
-    //       }),
-    //       rotation: {
-    //         rotationHz: 0.2,
-    //       },
-    //     });
-    //     break;
-    //   case "speed":
-    //     player.node.send({
-    //       op: "filters",
-    //       guildId: message.guild?.id,
-    //       timescale: {
-    //         speed: parseFloat(args[1]),
-    //       },
-    //     });
-    //     break;
-    // }
   }
 }

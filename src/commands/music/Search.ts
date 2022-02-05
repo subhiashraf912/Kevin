@@ -1,7 +1,6 @@
 import { Message, MessageEmbed } from "discord.js";
 import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
-import Player from "../../classes/Erela/Player";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 
 export default class SearchCommand extends BaseCommand {

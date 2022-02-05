@@ -95,7 +95,9 @@ export async function registerSlashCommands(
     }
   }
   client.on("ready", (c) => {
-    client.guilds.cache.get("783991881028993045")?.commands.set([]);
-    client.application?.commands.set(slashCommandsArray);
+    try {
+      // client.guilds.cache.get("783991881028993045")?.commands.set([]);
+      // client.application?.commands.set(slashCommandsArray);
+    } catch {}
   });
 }

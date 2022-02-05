@@ -5,7 +5,7 @@ interface CommandOptions {
   name: string;
   aliases?: string[];
   category: CommandCategory;
-  permissions?: PermissionsGuard;
+  permissions: PermissionsGuard;
   description?: string;
   usage?: string;
 }

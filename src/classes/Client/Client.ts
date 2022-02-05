@@ -1,4 +1,10 @@
-import { Client, ClientOptions, Collection } from "discord.js";
+import {
+  Client,
+  ClientOptions,
+  Collection,
+  Message,
+  Snowflake,
+} from "discord.js";
 import BaseEvent from "../Base/BaseEvent";
 import BaseCommand from "../Base/BaseCommand";
 import ClientUtils from "../Utility/ClientUtils";
@@ -18,6 +24,8 @@ export default class DiscordClient extends Client {
   database = new Database(process.env.MONGO_DB!);
   configurations = new ClientConfiguration(this);
   invites = new InviteTracker(this).init();
+  messages = new Collection<Snowflake, Message[]>();
+
   erela;
   wss = io(process.env.WEB_SOCKET!);
 

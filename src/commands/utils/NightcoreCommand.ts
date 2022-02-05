@@ -4,11 +4,16 @@ import DiscordClient from "../../classes/Client/Client";
 import DisTube from "distube";
 import ytdl from "discord-ytdl-core";
 import fs from "fs";
+import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 export default class NightcoreCommand extends BaseCommand {
   constructor() {
     super({
       name: "nightcore",
       category: "Utils",
+      permissions: new PermissionsGuard({
+        botPermissions: [],
+        userPermissions: [],
+      }),
     });
   }
   async run(client: DiscordClient, message: Message, args: Array<string>) {

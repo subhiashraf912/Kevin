@@ -1,7 +1,12 @@
 [
   {
-    "name": "3d",
-    "description": "Toggles the 3d filter mode",
+    "name": "nightcore",
+    "description": "Toggles the nightcore filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "vaporwave",
+    "description": "Toggles the vaporwave filter mode",
     "emoji": "💢"
   },
   {
@@ -10,8 +15,38 @@
     "emoji": "💢"
   },
   {
-    "name": "nightcore",
-    "description": "Toggles the nightcore filter mode",
+    "name": "pop",
+    "description": "Toggles the pop filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "soft",
+    "description": "Toggles the soft filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "treblebass",
+    "description": "Toggles the treblebass filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "8d",
+    "description": "Toggles the 8d filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "kakaoke",
+    "description": "Toggles the kakaoke filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "vibrato",
+    "description": "Toggles the vibrato filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "tremolo",
+    "description": "Toggles the tremolo filter mode",
     "emoji": "💢"
   }
 ]
