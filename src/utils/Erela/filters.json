@@ -1,0 +1,17 @@
+[
+  {
+    "name": "3d",
+    "description": "Toggles the 3d filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "bassboost",
+    "description": "Toggles the bassboost filter mode",
+    "emoji": "💢"
+  },
+  {
+    "name": "nightcore",
+    "description": "Toggles the nightcore filter mode",
+    "emoji": "💢"
+  }
+]

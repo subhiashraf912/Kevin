@@ -1,7 +1,6 @@
 import { Node } from "erela.js";
 import BaseNonTypedEvent from "../../classes/Base/BaseNonTypedEvent";
 import DiscordClient from "../../classes/Client/Client";
-
 export default class ReadyEvent extends BaseNonTypedEvent {
   constructor() {
     super("nodeConnect");
