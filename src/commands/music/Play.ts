@@ -18,6 +18,12 @@ export default class PlayCommand extends BaseCommand {
   async run(client: DiscordClient, message: Message, args: Array<string>) {
     if (!message.member?.voice.channel)
       return message.reply("You need to join a voice channel.");
+    if (message.guild?.me?.voice.channel) {
+      if (message.guild.me.voice.channel.id !== message.member.voice.channel.id)
+        return message.reply(
+          "You need to be in the same voice channel as the bot to play music."
+        );
+    }
     if (!args.length)
       return message.reply("You need to give me a URL or a search term.");
 

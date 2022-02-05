@@ -20,7 +20,14 @@ export default class AddRelatedSongCommand extends BaseCommand {
     const player = client.erela.get(message.guildId!) as Player;
     if (!player)
       return message.reply("There's nothing currently playing in the server.");
-
+    if (!message.member?.voice.channel)
+      return message.reply("You need to be in a voice channel.");
+    if (
+      message.member.voice.channel.id !== message.guild?.me?.voice.channel?.id
+    )
+      return message.reply(
+        "You need to be in the same voice channel as the bot"
+      );
     const song = await player.addRelatedSong();
     await message.reply(`🎵 ${song.title} has been added to the queue`);
   }

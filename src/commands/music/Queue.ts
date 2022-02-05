@@ -1,6 +1,7 @@
 import { Message, MessageEmbed } from "discord.js";
 import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
+import Player from "../../classes/Erela/Player";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 
 export default class QueueCommand extends BaseCommand {
@@ -16,9 +17,17 @@ export default class QueueCommand extends BaseCommand {
   }
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
-    const player = client.erela.get(message.guild?.id!);
-    if (!player) return message.reply("there is no player for this guild.");
-
+    const player = client.erela.get(message.guildId!) as Player;
+    if (!player)
+      return message.reply("There's nothing currently playing in the server.");
+    if (!message.member?.voice.channel)
+      return message.reply("You need to be in a voice channel.");
+    if (
+      message.member.voice.channel.id !== message.guild?.me?.voice.channel?.id
+    )
+      return message.reply(
+        "You need to be in the same voice channel as the bot"
+      );
     const queue = player.queue;
     const embed = new MessageEmbed().setAuthor({
       name: `Queue for ${message.guild?.name}`,
