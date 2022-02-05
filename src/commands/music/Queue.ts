@@ -11,8 +11,9 @@ export default class QueueCommand extends BaseCommand {
       category: "Music",
       permissions: new PermissionsGuard({
         userPermissions: [],
-        botPermissions: [],
+        botPermissions: ["CONNECT", "SPEAK"],
       }),
+      aliases: ["q"],
     });
   }
 

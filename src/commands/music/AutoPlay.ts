@@ -11,8 +11,9 @@ export default class AddRelatedSongCommand extends BaseCommand {
       category: "Music",
       permissions: new PermissionsGuard({
         userPermissions: [],
-        botPermissions: [],
+        botPermissions: ["CONNECT", "SPEAK"],
       }),
+      aliases: ["ap"],
     });
   }
 

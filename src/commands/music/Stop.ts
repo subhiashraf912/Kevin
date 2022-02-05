@@ -11,8 +11,9 @@ export default class StopCommand extends BaseCommand {
       category: "Music",
       permissions: new PermissionsGuard({
         userPermissions: [],
-        botPermissions: [],
+        botPermissions: ["CONNECT", "SPEAK"],
       }),
+      aliases: ["leave", "dc", "disconnect"],
     });
   }
 

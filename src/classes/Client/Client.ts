@@ -6,9 +6,8 @@ import Database from "../Database/Database";
 import ClientConfiguration from "./ClientConfigurationsManager";
 import InviteTracker from "djs-invite-tracker";
 import { io } from "socket.io-client";
-import { Manager } from "erela.js";
-import "../../utils/Extends/Erela";
 import BaseSlashCommand from "../Base/BaseSlashCommand";
+import Erela from "../Erela";
 
 export default class DiscordClient extends Client {
   private _commands = new Collection<string, BaseCommand>();
@@ -24,20 +23,7 @@ export default class DiscordClient extends Client {
 
   constructor(options: ClientOptions) {
     super(options);
-    const client = this;
-    this.erela = new Manager({
-      nodes: [
-        {
-          host: "localhost",
-          port: 2333,
-          password: "youshallnotpass",
-        },
-      ],
-      send(id, payload) {
-        const guild = client.guilds.cache.get(id);
-        if (guild) guild.shard.send(payload);
-      },
-    });
+    this.erela = Erela(this);
   }
 
   get commands(): Collection<string, BaseCommand> {

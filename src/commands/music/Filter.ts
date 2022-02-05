@@ -18,7 +18,7 @@ export default class FilterCommand extends BaseCommand {
       category: "Music",
       permissions: new PermissionsGuard({
         userPermissions: [],
-        botPermissions: [],
+        botPermissions: ["CONNECT", "SPEAK"],
       }),
     });
   }
@@ -27,6 +27,7 @@ export default class FilterCommand extends BaseCommand {
     const player = client.erela.get(message.guildId!) as Player;
     if (!player)
       return message.reply("There's nothing currently playing in the server.");
+
     if (!message.member?.voice.channel)
       return message.reply("You need to be in a voice channel.");
     if (
