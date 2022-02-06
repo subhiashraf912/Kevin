@@ -1,41 +1,39 @@
-import {
-  registerCommands,
-  registerErelaEvents,
-  registerEvents,
-  registerSlashCommands,
-  // registerWebSocketEvents,
-} from "./utils/registry";
-import config from "../slappey.json";
-import DiscordClient from "./classes/Client/Client";
-import dotenv from "dotenv";
-import intents from "./utils/ClientIntents";
-dotenv.config();
+type bot = {
+  name: string;
+  owner: string;
+  token: string;
+  prefix: string;
+};
 
-const client = new DiscordClient({
-  intents: intents,
-});
+import configs from "../configs.json";
+const bots = configs.bots as bot[];
+import processManager from "pm2";
 
-(async () => {
-  client.prefix = config.prefix || client.prefix;
-  await registerCommands(client, "../commands");
-  await registerEvents(client, "../events");
-  await registerSlashCommands(client, "../slashCommands");
-  await registerErelaEvents(client, "../erelaEvents");
-  // await registerWebSocketEvents(client, "../WebSocketEvents");
-  await client.database.init();
-  await client.login(process.env.BOT_TOKEN);
-})();
-
-client.on("voiceStateUpdate", (oldState, newState) => {
-  try {
-    if (oldState.guild.id !== "783991881028993045") return;
-    if (!oldState.channel && newState.channel) {
-      const role = newState.guild.roles.cache.get("933290405116665876");
-      if (role) newState.member?.roles.add(role);
+const mongodb =
+  "mongodb+srv://admin:4Z12t2TYyBQGdPmT@hentai.klm1z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+bots.forEach((element) => {
+  const botName = element.name;
+  const botPrefix = element.prefix;
+  const botToken = element.token;
+  const mainOwner = element.owner;
+  processManager.start(
+    {
+      name: botName,
+      script: "dist/src/Bot/index.js",
+      env: {
+        BOT_TOKEN: botToken,
+        BOT_PREFIX: botPrefix,
+        MONGO_DB: mongodb,
+        MAIN_OWNER: mainOwner,
+      },
+    },
+    function (err, apps) {
+      if (err) {
+        console.error(err);
+        return processManager.disconnect();
+      } else {
+        console.log(`${botName} is Running!`);
+      }
     }
-    if (oldState.channel && !newState.channel) {
-      const role = newState.guild.roles.cache.get("933290405116665876");
-      if (role) newState.member?.roles.remove(role);
-    }
-  } catch {}
+  );
 });

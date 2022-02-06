@@ -28,6 +28,7 @@
     "node-opus": "^0.3.3",
     "node-vibrant": "^3.2.1-alpha.1",
     "opusscript": "^0.0.8",
+    "pm2": "^5.1.2",
     "socket.io-client": "^4.4.1",
     "youtube-sr": "^4.1.13",
     "ytdl-core": "^4.10.1"
@@ -41,6 +42,8 @@
   "scripts": {
     "dev": "nodemon ./src/index.ts",
     "start": "node ./dist/src/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "lavalink": "pm2 start --name=Lavalink src/Servers/Lavalink/Lavalink.jar --interpreter=java --node-args=-jar",
+    "startt": "rm -rf dist && yarn build && yarn start"
   }
 }

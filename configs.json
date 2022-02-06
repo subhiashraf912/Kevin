@@ -1,0 +1,16 @@
+{
+  "bots": [
+    {
+      "name": "Kevin",
+      "owner": "507684120739184640",
+      "token": "OTMyMzYyNTg3NTUzNzkyMDYw.YeR4Uw.ZPd-oWZ5DxnvxMIwiYhN3pf192A",
+      "prefix": "!"
+    },
+    {
+      "name": "Venom",
+      "owner": "",
+      "token": "OTM5OTQxOTQyMDE0Mzc3OTg0.YgALJg.gm9dW23NMeFl1n7kphYKltGE-0U",
+      "prefix": "!"
+    }
+  ]
+}
