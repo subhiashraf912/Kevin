@@ -17,7 +17,7 @@ export async function registerCommands(
       const command = new Command();
       client.commands.set(command.name, command);
       command.aliases.forEach((alias: string) => {
-        client.commands.set(alias, command);
+        client.aliases.set(alias, command.name);
       });
     }
   }
@@ -96,8 +96,8 @@ export async function registerSlashCommands(
   }
   client.on("ready", (c) => {
     try {
-      // client.guilds.cache.get("783991881028993045")?.commands.set([]);
-      // client.application?.commands.set(slashCommandsArray);
+      client.guilds.cache.get("783991881028993045")?.commands.set([]);
+      client.application?.commands.set(slashCommandsArray);
     } catch {}
   });
 }

@@ -19,6 +19,7 @@ export default class DiscordClient extends Client {
   private _commands = new Collection<string, BaseCommand>();
   private _events = new Collection<string, BaseEvent>();
   private _slashCommands = new Collection<string, BaseSlashCommand>();
+  private _aliases = new Collection<string, string>();
   private _prefix: string = "!";
   utils = new ClientUtils(this);
   database = new Database(process.env.MONGO_DB!);
@@ -36,6 +37,9 @@ export default class DiscordClient extends Client {
 
   get commands(): Collection<string, BaseCommand> {
     return this._commands;
+  }
+  get aliases(): Collection<string, string> {
+    return this._aliases;
   }
   get events(): Collection<string, BaseEvent> {
     return this._events;

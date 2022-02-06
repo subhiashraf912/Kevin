@@ -18,7 +18,9 @@ export default class MessageEvent extends BaseEvent {
         .slice(message.content.startsWith(prefix) ? prefix.length : 0)
         .trim()
         .split(/\s+/);
-      const command = client.commands.get(cmdName.toLowerCase());
+      const command =
+        client.commands.get(cmdName.toLowerCase()) ||
+        client.commands.get(client.aliases.get(cmdName.toLowerCase())!);
 
       if (command) {
         const runCommand = () => {
