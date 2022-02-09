@@ -10,12 +10,9 @@ export default class MessageEvent extends BaseEvent {
   async run(client: DiscordClient, message: Message) {
     if (message.author.bot || !message.member || !message.guild) return;
     const prefix = await client.configurations.prefixes.get(message.guild.id);
-    if (
-      message.content.startsWith(prefix) ||
-      message.guild.me?.voice.channelId === message.member.voice.channelId
-    ) {
+    if (message.content.startsWith(prefix)) {
       const [cmdName, ...cmdArgs] = message.content
-        .slice(message.content.startsWith(prefix) ? prefix.length : 0)
+        .slice(prefix.length)
         .trim()
         .split(/\s+/);
       const command =

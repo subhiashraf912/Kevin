@@ -1,11 +1,10 @@
-import { Collection, Snowflake } from "discord.js";
-import DiscordClient from "../Client/Client";
+import { Snowflake } from "discord.js";
+import BaseManager from "../../Base/BaseManager";
+import DiscordClient from "../../Client/Client";
 
-class PrefixesManager {
-  cache = new Collection<Snowflake, string>();
-  client;
+class PrefixesManager extends BaseManager<string> {
   constructor(client: DiscordClient) {
-    this.client = client;
+    super(client);
   }
   async create(guildId: Snowflake, prefix: string) {
     const configuration = await this.client.database.models.prefixes.create({

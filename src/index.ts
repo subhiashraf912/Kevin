@@ -10,7 +10,7 @@ const bots = configs.bots as bot[];
 import processManager from "pm2";
 
 const mongodb =
-  "mongodb+srv://admin:4Z12t2TYyBQGdPmT@hentai.klm1z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://root:root@maindb.uvcv2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 bots.forEach((element) => {
   const botName = element.name;
   const botPrefix = element.prefix;
