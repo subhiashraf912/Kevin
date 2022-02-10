@@ -1,4 +1,10 @@
-import { CommandInteraction, Guild, Message, MessageEmbed } from "discord.js";
+import {
+  CommandInteraction,
+  Guild,
+  GuildTextBasedChannel,
+  Message,
+  MessageEmbed,
+} from "discord.js";
 import DiscordClient from "../../classes/Client/Client";
 import BaseSlashCommand from "../../classes/Base/BaseSlashCommand";
 import MenuRoles from "../../utils/types/API/MenuRoles";
@@ -41,9 +47,10 @@ export default class ViewMenuRolesCommand extends BaseSlashCommand {
       await interaction.followUp({ content: "Here's the roles menu list" });
       client.utils.pagination({
         embeds,
-        message: interaction,
+        channel: interaction.channel as GuildTextBasedChannel,
         pageTravel: true,
         fastSkip: true,
+        author: interaction.user,
       });
     } else {
       const guildData = await client.database.models.menuRoles.findOne({
@@ -63,9 +70,10 @@ export default class ViewMenuRolesCommand extends BaseSlashCommand {
       await interaction.followUp({ content: "Here's the roles menu list" });
       client.utils.pagination({
         embeds,
-        message: interaction,
+        channel: interaction.channel as GuildTextBasedChannel,
         pageTravel: true,
         fastSkip: true,
+        author: interaction.user,
       });
     }
   }

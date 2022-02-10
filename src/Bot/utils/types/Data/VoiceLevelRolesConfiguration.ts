@@ -1,7 +1,7 @@
 import { Snowflake } from "discord.js";
 
 interface VoiceLevelsRolesConfiguration {
-  roles: object;
+  roles: any;
   guildId: Snowflake;
 }
 

@@ -4,6 +4,7 @@ type CommandCategory =
   | "Music"
   | "Welcoming"
   | "Utils"
-  | "Management";
+  | "Management"
+  | "Voice Levels";
 
 export default CommandCategory;

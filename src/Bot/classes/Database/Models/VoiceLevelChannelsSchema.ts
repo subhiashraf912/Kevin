@@ -5,8 +5,7 @@ const VoiceLevelChannelsSchema =
   new mongoose.Schema<VoiceLevelsChannelsConfiguration>({
     guildId: String,
     channels: {
-      type: Array,
-      default: [] as string[],
+      default: [],
     },
   });
 

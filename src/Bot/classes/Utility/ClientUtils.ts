@@ -38,6 +38,13 @@ class ClientUtils {
       return hours + ":" + minutes + ":" + seconds;
     }
   }
+  millisToMinutesAndSeconds = (timeInMiliseconds: number) => {
+    let h, m, s;
+    h = Math.floor(timeInMiliseconds / 1000 / 60 / 60);
+    m = Math.floor((timeInMiliseconds / 1000 / 60 / 60 - h) * 60);
+    s = Math.floor(((timeInMiliseconds / 1000 / 60 / 60 - h) * 60 - m) * 60);
+    return `${h} Hours - ${m} Minutes - ${s} Secs`;
+  };
 }
 
 export default ClientUtils;

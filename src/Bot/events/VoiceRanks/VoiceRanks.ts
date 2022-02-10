@@ -33,7 +33,7 @@ export default class VoiceRanksEvent extends BaseEvent {
         guildId
       );
       for (const [key, value] of Object.entries(voiceLevelRoles.roles)) {
-        if (parseInt(key) <= rank.voiceTime) {
+        if (parseInt(key) <= rank.voiceTime && typeof value == "string") {
           let role = member.guild.roles.cache.get(value);
           if (role && role.editable) await member.roles.add(role);
         }
@@ -90,6 +90,59 @@ export default class VoiceRanksEvent extends BaseEvent {
         userId,
       });
       rank.joinTime = Date.now();
+      await client.configurations.voiceLevels.ranks.update({
+        guildId,
+        joinTime: rank.joinTime,
+        userId,
+        voiceTime: rank.voiceTime,
+      });
+    }
+    //join
+    if (!oldState.channel && newState.channel) {
+      if (member.voice.mute) return;
+      const channel = member.voice.channel!;
+      const { channels } = await client.configurations.voiceLevels.channels.get(
+        guildId
+      );
+      if (channels[0] && !channels.includes(channel.id)) return;
+      let rank = await client.configurations.voiceLevels.ranks.get({
+        userId,
+        guildId,
+      });
+      if (!rank.joinTime) rank.joinTime = Date.now();
+      await client.configurations.voiceLevels.ranks.update({
+        guildId,
+        joinTime: rank.joinTime,
+        userId,
+        voiceTime: rank.voiceTime,
+      });
+    }
+
+    //leave event
+    if (oldState.channel && !newState.channel) {
+      if (member.voice.mute) return;
+      const channel = member.voice.channel!;
+      const { channels } = await client.configurations.voiceLevels.channels.get(
+        guildId
+      );
+      if (channels[0] && !channels.includes(channel.id)) return;
+      let rank = await client.configurations.voiceLevels.ranks.get({
+        userId,
+        guildId,
+      });
+      if (!rank.joinTime) rank.joinTime = Date.now();
+      rank.voiceTime = Date.now() - rank.joinTime + rank.voiceTime;
+      const voiceLevelRoles = await client.configurations.voiceLevels.roles.get(
+        guildId
+      );
+      for (const [key, value] of Object.entries(voiceLevelRoles.roles)) {
+        if (parseInt(key) <= rank.voiceTime && typeof value === "string") {
+          const role = member.guild.roles.cache.get(value);
+          if (role && role.editable) member.roles.add(role);
+        }
+      }
+
+      rank.joinTime = null;
       await client.configurations.voiceLevels.ranks.update({
         guildId,
         joinTime: rank.joinTime,

@@ -70,7 +70,8 @@ export default class PlayCommand extends BaseCommand {
         if (player.queue.size !== 0)
           return message.reply(`🎵 Enqueuing \`${res.tracks[0].title}.\``);
       }
-    } catch {
+    } catch (err) {
+      console.log(err);
       message.reply("Error happened, unsupported website");
     }
   }
