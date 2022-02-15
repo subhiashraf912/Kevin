@@ -1,94 +1,260 @@
-2022-02-14 07:51:32.334  INFO 1287 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:a,year,ago,neffex"
-2022-02-14 07:51:32.975  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: a,year,ago,neffex
-2022-02-14 10:43:35.373  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"c1622289530cc0a5ca900c36705ed821","op":"voiceUpdate","guildId":"939296971972313108","event":{"token":"913b66a843460e45","guild_id":"939296971972313108","endpoint":"dubai872.discord.media:443"}}
-2022-02-14 10:43:52.944  INFO 1287 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:مخليك بعيوني"
-2022-02-14 10:43:53.282  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: مخليك بعيوني
-2022-02-14 10:43:53.289  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"939296971972313108","track":"QAABEwIAidmK2KfYs9ixINi52KjYryDYp9mE2YjZh9in2KggLSDZhdiu2YTZitmDINio2LnZitmI2YbZiiB8INmF2YYg2KPZhNio2YjZhSDYo9iq2LDZg9ix2YMgfCAgWWFzZXIgQWJkIEFsV2FoYWIgLSBNa2hhbGVlayBCM3lvdW55IHwgRXhjbHVzaXZlADBZYXNlciBBYmQgQWx3YWhhYiB8INmK2KfYs9ixINi52KjYryDYp9mE2YjZh9in2KgAAAAAAAPgMAALNWRlb20yMmZiTXMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01ZGVvbTIyZmJNcwAHeW91dHViZQAAAAAAAAAA"}
-2022-02-14 10:43:59.988  INFO 1287 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:مخليك بعيوني"
-2022-02-14 10:44:00.307  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: مخليك بعيوني
-2022-02-14 10:48:06.721  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"939296971972313108","track":"QAABEwIAidmK2KfYs9ixINi52KjYryDYp9mE2YjZh9in2KggLSDZhdiu2YTZitmDINio2LnZitmI2YbZiiB8INmF2YYg2KPZhNio2YjZhSDYo9iq2LDZg9ix2YMgfCAgWWFzZXIgQWJkIEFsV2FoYWIgLSBNa2hhbGVlayBCM3lvdW55IHwgRXhjbHVzaXZlADBZYXNlciBBYmQgQWx3YWhhYiB8INmK2KfYs9ixINi52KjYryDYp9mE2YjZh9in2KgAAAAAAAPgMAALNWRlb20yMmZiTXMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01ZGVvbTIyZmJNcwAHeW91dHViZQAAAAAAAAAA"}
-2022-02-14 13:00:58.268  INFO 1287 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:pityparty"
-2022-02-14 13:00:58.791  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: pityparty
-2022-02-14 14:32:23.903  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"e198302807d99110d826b83349b8dbc6","op":"voiceUpdate","guildId":"492369946232225803","event":{"token":"b814e99ed3fea180","guild_id":"492369946232225803","endpoint":"rotterdam8925.discord.media:443"}}
-2022-02-14 14:54:20.620  INFO 1287 --- [XNIO-1 task-15] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:pensando a lei"
-2022-02-14 14:54:21.077  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: pensando a lei
-2022-02-14 14:54:21.085  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"689769817766363197","volume":100}
-2022-02-14 14:54:21.086  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"689769817766363197","track":"QAAAfQIAHlNoaXZhIC0gUGVuc2FuZG8gYSBsZWkgKEF1ZGlvKQAFU0hJVkEAAAAAAAKzaAALdG9OdlRqRUZBa0kAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj10b052VGpFRkFrSQAHeW91dHViZQAAAAAAAAAA"}
-2022-02-14 14:54:21.775  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"e198302807d99110d826b83349b8dbc6","op":"voiceUpdate","guildId":"689769817766363197","event":{"token":"6c7f0d7c6a2632e5","guild_id":"689769817766363197","endpoint":"milan3316.discord.media:443"}}
-2022-02-14 14:54:59.695  INFO 1287 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:pensando a lei"
-2022-02-14 14:55:00.084  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: pensando a lei
-2022-02-14 14:55:21.731  INFO 1287 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:cyka blyat"
-2022-02-14 14:55:22.232  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: cyka blyat
-2022-02-14 14:55:56.013  INFO 1287 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:cyka blyat"
-2022-02-14 14:55:56.487  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: cyka blyat
-2022-02-14 14:56:00.866  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"689769817766363197","pause":true}
-2022-02-14 14:56:00.867  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"689769817766363197"}
-2022-02-14 14:56:00.869  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"e198302807d99110d826b83349b8dbc6","op":"voiceUpdate","guildId":"689769817766363197","event":{"token":"6c7f0d7c6a2632e5","guild_id":"689769817766363197","endpoint":"milan3316.discord.media:443"}}
-2022-02-14 14:56:05.172  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"689769817766363197","volume":100}
-2022-02-14 14:56:05.407  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"e198302807d99110d826b83349b8dbc6","op":"voiceUpdate","guildId":"689769817766363197","event":{"token":"799913a49e8fd661","guild_id":"689769817766363197","endpoint":"milan3316.discord.media:443"}}
-2022-02-14 14:56:06.051  INFO 1287 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:cyka blyat"
-2022-02-14 14:56:06.596  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: cyka blyat
-2022-02-14 14:56:06.604  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"689769817766363197","track":"QAAAqwIARkRKIEJseWF0bWFuICYgUnVzc2lhbiBWaWxsYWdlIEJveXMgLSBDeWthIEJseWF0IChPZmZpY2lhbCBNdXNpYyBWaWRlbykAC0RKIEJseWF0bWFuAAAAAAACytgAC05xTTAzMmRuUHRrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9TnFNMDMyZG5QdGsAB3lvdXR1YmUAAAAAAAAAAA=="}
-2022-02-14 14:56:21.069  INFO 1287 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:pensando a lei"
-2022-02-14 14:56:21.434  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: pensando a lei
-2022-02-14 14:56:22.849  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"689769817766363197"}
-2022-02-14 14:56:22.851  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"689769817766363197","track":"QAAAhgIAJ1NoaXZhIC0gUGVuc2FuZG8gYSBsZWkgKE9mZmljaWFsIFZpZGVvKQAFU0hJVkEAAAAAAALSqAALUGJQXy1YczBEaTgAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1QYlBfLVhzMERpOAAHeW91dHViZQAAAAAAAAAA"}
-2022-02-14 15:27:02.924  INFO 1287 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:meppiaciat o cor"
-2022-02-14 15:27:03.190  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : No matches found
-2022-02-14 15:27:54.711  INFO 1287 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=4Ou95U25X2E"
-2022-02-14 15:27:54.819  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Teresa M'hê appicciato 'o core | Liberato | Tiktok
-2022-02-14 15:27:54.822  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"689769817766363197","track":"QAAAlwIAM1RlcmVzYSBNJ2jDqiBhcHBpY2NpYXRvICdvIGNvcmUgfCBMaWJlcmF0byB8IFRpa3RvawAKTWlsaSBNdXNpYwAAAAAAAQmgAAs0T3U5NVUyNVgyRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTRPdTk1VTI1WDJFAAd5b3V0dWJlAAAAAAAAAAA="}
-2022-02-14 15:34:02.714  INFO 1287 --- [XNIO-1 task-15] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:povero gabbiano"
-2022-02-14 15:34:03.149  INFO 1287 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: povero gabbiano
-2022-02-14 15:34:03.157  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"689769817766363197","track":"QAAAgwIAIHBvdmVybyBnYWJiaWFubyAtIGdpYW5uaSBjZWxlc3RlAAlDRU1BRUNFTU8AAAAAAAOCcAALenZOZkdnNXZLVHMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj16dk5mR2c1dktUcwAHeW91dHViZQAAAAAAAAAA"}
-2022-02-14 15:52:53.580  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"e198302807d99110d826b83349b8dbc6","op":"voiceUpdate","guildId":"689769817766363197","event":{"token":"799913a49e8fd661","guild_id":"689769817766363197","endpoint":"milan3316.discord.media:443"}}
-2022-02-14 15:52:54.360  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"e198302807d99110d826b83349b8dbc6","op":"voiceUpdate","guildId":"689769817766363197","event":{"token":"799913a49e8fd661","guild_id":"689769817766363197","endpoint":"milan3316.discord.media:443"}}
-2022-02-14 15:52:56.598  INFO 1287 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"e198302807d99110d826b83349b8dbc6","op":"voiceUpdate","guildId":"689769817766363197","event":{"token":"799913a49e8fd661","guild_id":"689769817766363197","endpoint":"milan3316.discord.media:443"}}
-2022-02-14 16:14:12.768  INFO 2010 --- [main] lavalink.server.Launcher                 : 
-
-[32m       .  [31m _                  _ _       _    [32m__ _ _
-[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
-[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
-[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
-[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
-[0m    =========================================[32m/_/_/_/[0m
-
-	Version:        a060ab32cba4e7eec8a69cd91d8f80c60bc6eab3-SNAPSHOT
-	Build:          1336
-	Build time:     24.01.2022 12:04:37 UTC
-	Branch          master
-	Commit:         a060ab3
-	Commit time:    24.01.2022 11:59:16 UTC
-	JVM:            13.0.7
-	Lavaplayer      1.3.96-original
-
-2022-02-14 16:14:12.902  INFO 2010 --- [main] lavalink.server.Launcher                 : Starting Launcher on aze-sama with PID 2010 (/root/Discord/Kevin/src/Bot/Servers/Lavalink/Lavalink.jar started by root in /root/Discord/Kevin/src/Bot/Servers/Lavalink)
-2022-02-14 16:14:12.904  INFO 2010 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2022-02-14 16:14:13.036  WARN 2010 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2022-02-14 16:14:14.089  WARN 2010 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2022-02-14 16:14:14.120  INFO 2010 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2022-02-14 16:14:14.121  INFO 2010 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1162 ms
-2022-02-14 16:14:14.608  WARN 2010 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2022-02-14 16:14:14.983  INFO 2010 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2022-02-14 16:14:15.189  INFO 2010 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
-2022-02-14 16:14:15.189  INFO 2010 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
-2022-02-14 16:14:15.195  INFO 2010 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
-2022-02-14 16:14:15.221  INFO 2010 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
-2022-02-14 16:14:15.455  INFO 2010 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-14 16:14:15.846  INFO 2010 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2022-02-14 16:14:15.858  INFO 2010 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2022-02-14 16:14:15.945  INFO 2010 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2022-02-14 16:14:15.951  INFO 2010 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.838 seconds (JVM running for 4.597)
-2022-02-14 16:14:15.953  INFO 2010 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2022-02-14 16:14:24.342  INFO 2010 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-02-14 16:14:24.342  INFO 2010 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-02-14 16:14:24.349  INFO 2010 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-02-14 16:14:24.367  INFO 2010 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:58770
-2022-02-14 16:14:24.453  INFO 2010 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
-2022-02-14 16:14:24.537  INFO 2010 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:58780
-2022-02-14 16:14:24.544  INFO 2010 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
-2022-02-14 16:15:28.258  INFO 2010 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:something just like this"
-2022-02-14 16:15:29.428  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: something just like this
-2022-02-14 16:15:29.464  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"938704039804272660","volume":100}
-2022-02-14 16:15:29.468  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAqAIAPlRoZSBDaGFpbnNtb2tlcnMgJiBDb2xkcGxheSAtIFNvbWV0aGluZyBKdXN0IExpa2UgVGhpcyAoTHlyaWMpABBUaGUgQ2hhaW5zbW9rZXJzAAAAAAADyMAAC0ZNN01GWW95bFZzAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Rk03TUZZb3lsVnMAB3lvdXR1YmUAAAAAAAAAAA=="}
-2022-02-14 16:15:29.671  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"58935dc0127caf7f197a0f6140882621","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"91e2d2d3e222177a","guild_id":"938704039804272660","endpoint":"rotterdam3564.discord.media:443"}}
+2022-02-15 04:29:15.972 ERROR 2010 --- [XNIO-1 task-27] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /8.26.182.130:50256
+2022-02-15 04:29:18.408 ERROR 2010 --- [XNIO-1 task-20] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /209.141.51.222:18006
+2022-02-15 05:53:11.448  INFO 2010 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:53:11.450  INFO 2010 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:53:11.452  INFO 2010 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:53:11.461  INFO 2010 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:53:11.461  INFO 2010 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:53:11.471  INFO 2010 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:53:11.814  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:53:11.820  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-124] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:53:11.822  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:53:11.823  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-138] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:53:11.827  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:53:11.828  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:53:11.843  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-137] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:53:11.849  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:53:11.998  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-136] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:53:12.003  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:53:12.163  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:53:12.167  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:53:28.892  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 05:53:28.895  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 05:53:28.896  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 05:53:28.896  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 05:53:28.902  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 05:53:28.906  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 05:58:45.805  INFO 2010 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:58:45.806  INFO 2010 --- [XNIO-1 task-8] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:58:45.817  INFO 2010 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:58:45.824  INFO 2010 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:58:45.824  INFO 2010 --- [XNIO-1 task-12] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:58:45.830  INFO 2010 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 05:58:46.130  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:58:46.133  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:58:46.180  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-141] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:58:46.182  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:58:46.182  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-143] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:58:46.185  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:58:46.195  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-142] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:58:46.198  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:58:46.228  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-140] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:58:46.230  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 05:58:46.516  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 05:58:46.519  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 07:30:39.293  INFO 2010 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي"
+2022-02-15 07:30:39.293  INFO 2010 --- [XNIO-1 task-22] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي"
+2022-02-15 07:30:39.296  INFO 2010 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي"
+2022-02-15 07:30:39.301  INFO 2010 --- [XNIO-1 task-21] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي"
+2022-02-15 07:30:39.813  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي
+2022-02-15 07:30:39.820  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAA7gIAfU1hcndhbiBQYWJsbyBYIE1vbG90b2YgLSBFbCBHZW1lemEgKE9mZmljaWFsIE11c2ljIFZpZGVvKSjZhdix2YjYp9mGINio2KfYqNmE2YggIC0g2KfZhNis2YXZitiy2Kko2KfZhNmB2YrYr9mK2Ygg2KfZhNix2LPZhdmKABdBbGVmIDNlaW4g2KPZhNmBINi52YrZhgAAAAAAAw1AAAtSTWlLTnFCYVg0NAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJNaUtOcUJhWDQ0AAd5b3V0dWJlAAAAAAAAAAA="}
+2022-02-15 07:30:39.833  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-144] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي
+2022-02-15 07:30:39.838  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAA7gIAfU1hcndhbiBQYWJsbyBYIE1vbG90b2YgLSBFbCBHZW1lemEgKE9mZmljaWFsIE11c2ljIFZpZGVvKSjZhdix2YjYp9mGINio2KfYqNmE2YggIC0g2KfZhNis2YXZitiy2Kko2KfZhNmB2YrYr9mK2Ygg2KfZhNix2LPZhdmKABdBbGVmIDNlaW4g2KPZhNmBINi52YrZhgAAAAAAAw1AAAtSTWlLTnFCYVg0NAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJNaUtOcUJhWDQ0AAd5b3V0dWJlAAAAAAAAAAA="}
+2022-02-15 07:30:39.907  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-145] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي
+2022-02-15 07:30:39.912  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAA7gIAfU1hcndhbiBQYWJsbyBYIE1vbG90b2YgLSBFbCBHZW1lemEgKE9mZmljaWFsIE11c2ljIFZpZGVvKSjZhdix2YjYp9mGINio2KfYqNmE2YggIC0g2KfZhNis2YXZitiy2Kko2KfZhNmB2YrYr9mK2Ygg2KfZhNix2LPZhdmKABdBbGVmIDNlaW4g2KPZhNmBINi52YrZhgAAAAAAAw1AAAtSTWlLTnFCYVg0NAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJNaUtOcUJhWDQ0AAd5b3V0dWJlAAAAAAAAAAA="}
+2022-02-15 07:30:40.249  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Marwan Pablo X Molotof - El Gemeza (Official Music Video)(مروان بابلو - الجميزة(الفيديو الرسمي
+2022-02-15 07:30:40.255  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAA7gIAfU1hcndhbiBQYWJsbyBYIE1vbG90b2YgLSBFbCBHZW1lemEgKE9mZmljaWFsIE11c2ljIFZpZGVvKSjZhdix2YjYp9mGINio2KfYqNmE2YggIC0g2KfZhNis2YXZitiy2Kko2KfZhNmB2YrYr9mK2Ygg2KfZhNix2LPZhdmKABdBbGVmIDNlaW4g2KPZhNmBINi52YrZhgAAAAAAAw1AAAtSTWlLTnFCYVg0NAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJNaUtOcUJhWDQ0AAd5b3V0dWJlAAAAAAAAAAA="}
+2022-02-15 07:30:47.034  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"938704039804272660","pause":true}
+2022-02-15 07:30:47.034  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"0e818c8e0e990963a281c3334e6a92f9","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"0335f2a5c9774b4b","guild_id":"938704039804272660","endpoint":"rotterdam8905.discord.media:443"}}
+2022-02-15 07:30:47.035  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"938704039804272660","pause":false}
+2022-02-15 07:30:47.165  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"0e818c8e0e990963a281c3334e6a92f9","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"0335f2a5c9774b4b","guild_id":"938704039804272660","endpoint":"rotterdam8905.discord.media:443"}}
+2022-02-15 07:30:47.440  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"0e818c8e0e990963a281c3334e6a92f9","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"0335f2a5c9774b4b","guild_id":"938704039804272660","endpoint":"rotterdam3928.discord.media:443"}}
+2022-02-15 07:30:58.140  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"filters","guildId":"938704039804272660","equalizer":[{"band":0,"gain":0.6},{"band":1,"gain":0.67},{"band":2,"gain":0.67},{"band":3,"gain":0},{"band":4,"gain":-0.5},{"band":5,"gain":0.15},{"band":6,"gain":-0.45},{"band":7,"gain":0.23},{"band":8,"gain":0.35},{"band":9,"gain":0.45},{"band":10,"gain":0.55},{"band":11,"gain":0.6},{"band":12,"gain":0.55},{"band":13,"gain":0}]}
+2022-02-15 07:32:13.808  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"filters","guildId":"938704039804272660","equalizer":[{"band":0,"gain":0.65},{"band":1,"gain":0.45},{"band":2,"gain":-0.45},{"band":3,"gain":-0.65},{"band":4,"gain":-0.35},{"band":5,"gain":0.45},{"band":6,"gain":0.55},{"band":7,"gain":0.6},{"band":8,"gain":0.6},{"band":9,"gain":0.6},{"band":10,"gain":0},{"band":11,"gain":0},{"band":12,"gain":0},{"band":13,"gain":0}]}
+2022-02-15 12:09:37.513  INFO 2010 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Fake,A,Smile"
+2022-02-15 12:09:37.998  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Fake,A,Smile
+2022-02-15 14:05:52.012  INFO 2010 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:05:52.013  INFO 2010 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:05:52.015  INFO 2010 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:05:52.015  INFO 2010 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:05:52.016  INFO 2010 --- [XNIO-1 task-30] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:05:52.028  INFO 2010 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:05:52.451  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-149] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:05:52.457  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:05:52.462  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-147] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:05:52.467  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:05:52.587  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:05:52.587  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-146] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:05:52.593  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:05:52.594  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:05:52.628  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-148] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:05:52.633  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:05:52.863  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-149] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:05:52.868  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:04.669  INFO 2010 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:05.029  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-147] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:05.035  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:08.276  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"9597f9313a5514ce9aa858b3011b7254","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"df0c14c56d55972a","guild_id":"938704039804272660","endpoint":"rotterdam8905.discord.media:443"}}
+2022-02-15 14:06:08.278  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"140792ac450d2dbea5e47f78e0cf3eaf","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"09bf49f06bb95b0b","guild_id":"938704039804272660","endpoint":"rotterdam8905.discord.media:443"}}
+2022-02-15 14:06:08.280  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"6b83d499c2bcee54aa5bed41ef805e31","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"f594fbfde14c3965","guild_id":"938704039804272660","endpoint":"rotterdam8905.discord.media:443"}}
+2022-02-15 14:06:13.423  INFO 2010 --- [XNIO-1 task-12] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:13.428  INFO 2010 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:13.431  INFO 2010 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:13.788  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-146] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:13.789  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:13.792  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:13.797  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:13.806  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-148] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:13.811  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:27.412  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"938704039804272660","pause":true}
+2022-02-15 14:06:27.412  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"574c07e00a746e06e1e1751ffad55457","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"3a4d81b316bd6332","guild_id":"938704039804272660","endpoint":"rotterdam3338.discord.media:443"}}
+2022-02-15 14:06:27.413  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"938704039804272660","pause":false}
+2022-02-15 14:06:27.529  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"574c07e00a746e06e1e1751ffad55457","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"3a4d81b316bd6332","guild_id":"938704039804272660","endpoint":"rotterdam3928.discord.media:443"}}
+2022-02-15 14:06:27.530  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"574c07e00a746e06e1e1751ffad55457","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"3a4d81b316bd6332","guild_id":"938704039804272660","endpoint":"rotterdam3928.discord.media:443"}}
+2022-02-15 14:06:33.127  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 14:06:33.137  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 14:06:36.953  INFO 2010 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:36.960  INFO 2010 --- [XNIO-1 task-24] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:37.351  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-146] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:37.357  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:37.380  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:37.383  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:48.698  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 14:06:48.708  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 14:06:48.708  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 14:06:48.709  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 14:06:48.723  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"938704039804272660"}
+2022-02-15 14:06:52.416  INFO 2010 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:52.419  INFO 2010 --- [XNIO-1 task-21] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:52.421  INFO 2010 --- [XNIO-1 task-27] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:52.425  INFO 2010 --- [XNIO-1 task-25] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:52.431  INFO 2010 --- [XNIO-1 task-20] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:06:52.803  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-150] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:52.807  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:52.812  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-151] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:52.814  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:52.821  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:52.824  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:52.825  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-146] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:52.828  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:53.194  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-150] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:06:53.198  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:06:59.133  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"938704039804272660","pause":true}
+2022-02-15 14:06:59.134  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"b1bc38f5c4b299415af8510bf61bbe3e","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"ca9b274304945811","guild_id":"938704039804272660","endpoint":"rotterdam3338.discord.media:443"}}
+2022-02-15 14:06:59.134  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"938704039804272660","pause":false}
+2022-02-15 14:06:59.219  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"b1bc38f5c4b299415af8510bf61bbe3e","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"ca9b274304945811","guild_id":"938704039804272660","endpoint":"rotterdam3928.discord.media:443"}}
+2022-02-15 14:06:59.269  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"b1bc38f5c4b299415af8510bf61bbe3e","op":"voiceUpdate","guildId":"938704039804272660","event":{"token":"ca9b274304945811","guild_id":"938704039804272660","endpoint":"rotterdam3928.discord.media:443"}}
+2022-02-15 14:07:05.204  INFO 2010 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:07:05.206  INFO 2010 --- [XNIO-1 task-30] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:07:05.210  INFO 2010 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:07:05.221  INFO 2010 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:العواطف"
+2022-02-15 14:07:05.533  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-151] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:07:05.543  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-139] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:07:05.555  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-150] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:07:05.620  INFO 2010 --- [lava-daemon-pool-info-loader-2-thread-146] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: العواطف
+2022-02-15 14:11:21.238  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:11:21.259  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:11:21.712  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:11:21.838  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"play","guildId":"938704039804272660","track":"QAAAzgIASNit2LPZitmGINi62LLYp9mEIC0g2KfZhNi52YjYp9i32YEgfCDZgdmK2K/ZitmIINmD2YTZitioINit2LXYsdmKIHwgMjAyMQAsU2hhYmFiIEFscWl0aGFyYSB8INi02KjYp9ioINin2YTZgtmK2KvYp9ix2KkAAAAAAAQayAALT2hSXzNCTUIwRTAAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PaFJfM0JNQjBFMAAHeW91dHViZQAAAAAAAAAA"}
+2022-02-15 14:48:51.418  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:58770 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:48:51.419  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:48:51.425  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:58780 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:48:51.425  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:48:53.418  INFO 2010 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38470
+2022-02-15 14:48:53.421  INFO 2010 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:48:53.584  INFO 2010 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38480
+2022-02-15 14:48:53.586  INFO 2010 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:53:34.909  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38470 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:53:34.909  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:53:34.913  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38480 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:53:34.913  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:53:36.815  INFO 2010 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38558
+2022-02-15 14:53:36.822  INFO 2010 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:53:37.016  INFO 2010 --- [XNIO-1 task-11] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38568
+2022-02-15 14:53:37.019  INFO 2010 --- [XNIO-1 task-11] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:55:11.316  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38558 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:55:11.316  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:55:11.318  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38568 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:55:11.319  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:55:13.401  INFO 2010 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38646
+2022-02-15 14:55:13.403  INFO 2010 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:55:13.511  INFO 2010 --- [XNIO-1 task-13] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38656
+2022-02-15 14:55:13.513  INFO 2010 --- [XNIO-1 task-13] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:57:26.983  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38646 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:57:26.984  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:57:26.987  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38656 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:57:26.988  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:57:28.915  INFO 2010 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38732
+2022-02-15 14:57:28.917  INFO 2010 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:57:29.312  INFO 2010 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38742
+2022-02-15 14:57:29.314  INFO 2010 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:59:40.912  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38742 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:59:40.913  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:59:40.916  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38732 -- CloseStatus[code=1006, reason=]
+2022-02-15 14:59:40.916  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 14:59:42.863  INFO 2010 --- [XNIO-1 task-14] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38820
+2022-02-15 14:59:42.865  INFO 2010 --- [XNIO-1 task-14] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 14:59:43.034  INFO 2010 --- [XNIO-1 task-17] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38830
+2022-02-15 14:59:43.036  INFO 2010 --- [XNIO-1 task-17] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:02:45.231  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38820 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:02:45.231  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:02:45.234  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38830 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:02:45.234  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:02:47.226  INFO 2010 --- [XNIO-1 task-23] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38912
+2022-02-15 15:02:47.228  INFO 2010 --- [XNIO-1 task-23] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:02:47.491  INFO 2010 --- [XNIO-1 task-24] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:38922
+2022-02-15 15:02:47.494  INFO 2010 --- [XNIO-1 task-24] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:05:31.911  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38912 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:05:31.911  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:05:31.913  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:38922 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:05:31.913  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:05:34.148  INFO 2010 --- [XNIO-1 task-19] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39000
+2022-02-15 15:05:34.150  INFO 2010 --- [XNIO-1 task-19] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:05:43.648  INFO 2010 --- [XNIO-1 task-22] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39024
+2022-02-15 15:05:43.650  INFO 2010 --- [XNIO-1 task-22] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:08:39.613  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39024 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:08:39.613  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:08:39.617  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39000 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:08:39.617  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:08:41.877  INFO 2010 --- [XNIO-1 task-18] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39090
+2022-02-15 15:08:41.879  INFO 2010 --- [XNIO-1 task-18] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:08:42.150  INFO 2010 --- [XNIO-1 task-21] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39098
+2022-02-15 15:08:42.152  INFO 2010 --- [XNIO-1 task-21] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:10:32.073  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39098 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:10:32.073  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:10:40.132  INFO 2010 --- [XNIO-1 task-27] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39156
+2022-02-15 15:10:40.135  INFO 2010 --- [XNIO-1 task-27] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:14:08.269  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39156 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:14:08.269  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:14:10.161  INFO 2010 --- [XNIO-1 task-25] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39206
+2022-02-15 15:14:10.163  INFO 2010 --- [XNIO-1 task-25] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:15:33.276  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39206 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:15:33.276  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:15:35.306  INFO 2010 --- [XNIO-1 task-20] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39256
+2022-02-15 15:15:35.308  INFO 2010 --- [XNIO-1 task-20] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:25:05.633  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39256 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:25:05.633  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:25:07.672  INFO 2010 --- [XNIO-1 task-28] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39330
+2022-02-15 15:25:07.674  INFO 2010 --- [XNIO-1 task-28] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:33:44.775  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39330 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:33:44.776  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:33:46.695  INFO 2010 --- [XNIO-1 task-26] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39402
+2022-02-15 15:33:46.696  INFO 2010 --- [XNIO-1 task-26] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:43:47.359  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39402 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:43:47.360  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:43:49.233  INFO 2010 --- [XNIO-1 task-29] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39464
+2022-02-15 15:43:49.235  INFO 2010 --- [XNIO-1 task-29] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:45:14.021  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39464 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:45:14.021  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:45:16.020  INFO 2010 --- [XNIO-1 task-31] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39516
+2022-02-15 15:45:16.022  INFO 2010 --- [XNIO-1 task-31] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:47:19.803  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39516 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:47:19.804  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:47:21.665  INFO 2010 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39586
+2022-02-15 15:47:21.668  INFO 2010 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:48:44.316  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39586 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:48:44.316  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:48:46.258  INFO 2010 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39636
+2022-02-15 15:48:46.265  INFO 2010 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:51:13.301  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39636 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:51:13.301  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:51:15.407  INFO 2010 --- [XNIO-1 task-30] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39690
+2022-02-15 15:51:15.409  INFO 2010 --- [XNIO-1 task-30] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:53:33.889  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39690 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:53:33.889  INFO 2010 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:53:36.237  INFO 2010 --- [XNIO-1 task-32] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39740
+2022-02-15 15:53:36.239  INFO 2010 --- [XNIO-1 task-32] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-02-15 15:58:57.014  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:39740 -- CloseStatus[code=1006, reason=]
+2022-02-15 15:58:57.014  INFO 2010 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-02-15 15:58:58.987  INFO 2010 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:39794
+2022-02-15 15:58:58.997  INFO 2010 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from erela.js

@@ -5,6 +5,7 @@ type CommandCategory =
   | "Welcoming"
   | "Utils"
   | "Management"
-  | "Voice Levels";
+  | "Voice Levels"
+  | "Text Levels";
 
 export default CommandCategory;

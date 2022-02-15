@@ -51,6 +51,8 @@ export default class MessageEvent extends BaseEvent {
           runCommand();
         }
       }
+    } else {
+      client.configurations.textLevels.handler.HandleTextMessage(message);
     }
   }
 }
