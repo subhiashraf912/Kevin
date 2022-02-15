@@ -22,10 +22,13 @@
     "erela.js-filters": "^1.2.7",
     "erela.js-spotify": "^1.2.0",
     "ffmpeg-static": "^4.4.1",
+    "gifencoder": "^2.0.1",
     "konva": "^8.3.2",
     "libsodium-wrappers": "^0.7.9",
+    "moment-duration-format": "^2.3.2",
     "mongoose": "^6.1.7",
     "ms": "^2.1.3",
+    "node-canvas-with-twemoji-and-discord-emoji": "^1.2.1",
     "node-opus": "^0.3.3",
     "node-vibrant": "^3.2.1-alpha.1",
     "opusscript": "^0.0.8",
@@ -35,9 +38,12 @@
     "ytdl-core": "^4.10.1"
   },
   "devDependencies": {
+    "@types/gifencoder": "^2.0.1",
+    "@types/moment-duration-format": "^2.2.3",
     "@types/ms": "^0.7.31",
     "@types/node": "^17.0.8",
     "@types/socket.io-client": "^3.0.0",
+    "copyfiles": "^2.4.1",
     "nodemon": "^2.0.15",
     "typescript": "^4.5.4"
   },
@@ -45,6 +51,11 @@
     "dev": "nodemon ./src/index.ts",
     "start": "node ./dist/src/index.js",
     "build": "tsc",
+    "copy-canvacord-images": "copyfiles --error --up 2 src/Bot/classes/Utility/@azecord/assets/data/images/*.* dist/src/Bot",
+    "copy-canvacord-fonts": "copyfiles --error --up 2 src/Bot/classes/Utility/@azecord/assets/data/fonts/*.* dist/src/Bot",
+    "copy-azecord-images": "copyfiles --error --up 2 src/Bot/classes/Utility/AzeCord/aze-canvas/assets/img/*.* dist/src/Bot",
+    "copy-azecord-fonts": "copyfiles --error --up 2 src/Bot/classes/Utility/AzeCord/aze-canvas/assets/fonts/*.* dist/src/Bot",
+    "postbuild": "yarn copy-canvacord-images && yarn copy-canvacord-fonts && yarn copy-azecord-images && yarn copy-azecord-fonts",
     "lavalink": "pm2 start --name=Lavalink src/Servers/Lavalink/Lavalink.jar --interpreter=java --node-args=-jar",
     "startt": "rm -rf dist && yarn build && yarn start"
   }

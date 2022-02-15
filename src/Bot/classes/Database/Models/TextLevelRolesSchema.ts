@@ -3,7 +3,10 @@ import TextLevelsRolesConfiguration from "../../../utils/types/Data/TextLevelRol
 
 const TextLevelRolesSchema = new mongoose.Schema<TextLevelsRolesConfiguration>({
   guildId: String,
-  roles: Array,
+  roles: {
+    type: Object,
+    default: {},
+  },
 });
 
 export default mongoose.model<TextLevelsRolesConfiguration>(

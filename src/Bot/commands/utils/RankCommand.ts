@@ -59,13 +59,14 @@ export default class RankCommand extends BaseCommand {
         case "TextRank":
           textRankDisabled = true;
           voiceRankDisabled = false;
-
+          const attachment = await client.utils.generateRankCard(
+            message.member!
+          );
           await msg.edit({
             components: [getRow()],
           });
           await interaction.reply({
-            content:
-              "The developer is lazy asf, text levels are gonna be added soon.",
+            files: [attachment],
             ephemeral: true,
           });
           break;

@@ -52,8 +52,8 @@ function generatetextLevelRolesEmbed(textLevelRoles: string[]) {
     k += 10;
     let info = "";
     r.forEach((levelRole) => {
-      info = `${info}\n> Level: ${millisToMinutesAndSeconds(
-        parseInt(levelRole.split(":")[0])
+      info = `${info}\n> Level: ${parseInt(
+        levelRole.split(":")[0]
       )} -> \`Role:\` ${levelRole.split(":")[1]}\n`;
     });
 
@@ -65,8 +65,3 @@ function generatetextLevelRolesEmbed(textLevelRoles: string[]) {
   }
   return embeds;
 }
-const millisToMinutesAndSeconds = (timeInMiliseconds: number) => {
-  let h;
-  h = Math.floor(timeInMiliseconds / 1000 / 60 / 60);
-  return `${h} Hours`;
-};
