@@ -74,7 +74,7 @@ export default class TextLevelsHandler {
       userId: message.author.id!,
     });
     for (const [key, value] of Object.entries(roles)) {
-      if (parseInt(key) < memberRank.level) {
+      if (parseInt(key) <= memberRank.level) {
         const role = message.guild.roles.cache.get(value as string);
         if (role && !message.member.roles.cache.has(role.id))
           rolesToBeAdded.push(role);

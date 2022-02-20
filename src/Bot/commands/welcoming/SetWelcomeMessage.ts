@@ -24,12 +24,16 @@ export default class SetWelcomeChannelCommand extends BaseCommand {
     const options: UpdateWelcomesConfigurationOptions = {
       message: msg,
     };
-    const updatedConfiguration = await client.configurations.welcomes.update(
-      guildId,
-      options
-    );
-    message.reply(
-      `> The welcome message has been set to ${updatedConfiguration.message}`
-    );
+    try {
+      const updatedConfiguration = await client.configurations.welcomes.update(
+        guildId,
+        options
+      );
+      message.reply(
+        `> The welcome message has been set to ${updatedConfiguration.message}`
+      );
+    } catch (err) {
+      message.reply((err as Error).message);
+    }
   }
 }

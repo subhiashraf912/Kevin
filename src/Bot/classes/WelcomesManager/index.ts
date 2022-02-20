@@ -51,15 +51,10 @@ class WelcomesManager {
         { new: true }
       );
     if (!databaseConfiguration) {
-      if (!options.channelId) {
-        throw new Error(
-          "The configuration wasn't found and the welcome message is not passed in for creating a new one."
-        );
-      }
       const newOptions: WelcomeChannelsRestOptions = {
         guildId,
         message: options.message!,
-        channelId: options.channelId,
+        channelId: options.channelId!,
       };
       const configuration = await this.create(newOptions);
       return configuration;

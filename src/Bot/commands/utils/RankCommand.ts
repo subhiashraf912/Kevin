@@ -21,6 +21,7 @@ export default class RankCommand extends BaseCommand {
   }
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
+    const member = message.mentions.members?.first() || message.member;
     let textRankDisabled = false;
     let voiceRankDisabled = false;
     const getRow = () => {
@@ -59,15 +60,12 @@ export default class RankCommand extends BaseCommand {
         case "TextRank":
           textRankDisabled = true;
           voiceRankDisabled = false;
-          const attachment = await client.utils.generateRankCard(
-            message.member!
-          );
+          const attachment = await client.utils.generateRankCard(member!);
           await msg.edit({
             components: [getRow()],
           });
           await interaction.reply({
             files: [attachment],
-            ephemeral: true,
           });
           break;
         case "VoiceRank":
@@ -91,7 +89,6 @@ export default class RankCommand extends BaseCommand {
                 voiceTime + voiceTimeJoinDiff
               )
             ),
-            ephemeral: true,
           });
           break;
       }
