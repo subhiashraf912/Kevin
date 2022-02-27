@@ -63,9 +63,12 @@ export default class VoiceRanksEvent extends BaseEvent {
       const voiceLevelRoles = await client.configurations.voiceLevels.roles.get(
         guildId
       );
-      for (const [key, value] of Object.entries(voiceLevelRoles)) {
+      for (const [key, value] of Object.entries(voiceLevelRoles.roles)) {
         if (parseInt(key) <= rank.voiceTime) {
-          const role = member.guild.roles.cache.get(value);
+          const role = member.guild.roles.cache.get(value as string);
+          console.log(value);
+          console.log(role);
+          console.log(role?.editable);
           if (role && role.editable) await member.roles.add(role);
         }
       }
