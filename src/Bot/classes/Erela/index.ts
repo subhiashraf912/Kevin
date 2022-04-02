@@ -15,8 +15,8 @@ export default (client: DiscordClient) => {
       //@ts-ignore
       new AppleMusic(),
       new Spotify({
-        clientID: process.env.SPOTIFY_ID!,
-        clientSecret: process.env.SPOTIFY_SECRET!,
+        clientID: "e3dd02fbac0f468cb73955409d3070a2"!,
+        clientSecret: "bf5d60aa0bcb419c8ff46f10a43d7bf6"!,
       }),
     ],
     nodes: [
