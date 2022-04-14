@@ -8,5 +8,6 @@ export default class ReadyEvent extends BaseEvent {
   async run(client: DiscordClient) {
     console.log(`${client.user?.username} has logged in.`);
     client.erela.init(client.user?.id);
+    client.user?.setActivity({ name: "!help", type: "WATCHING" });
   }
 }
