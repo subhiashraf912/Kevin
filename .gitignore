@@ -2,3 +2,4 @@
 /node_modules
 /dist
 /src/Servers/Lavalink/logs
+/src/Bot/Servers/Lavalink/logs
