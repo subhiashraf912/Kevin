@@ -1,10 +1,4 @@
-import {
-  registerCommands,
-  registerErelaEvents,
-  registerEvents,
-  registerSlashCommands,
-  // registerWebSocketEvents,
-} from "./utils/registry";
+import { registerCommands, registerErelaEvents, registerEvents, registerSlashCommands } from "./utils/registry";
 import DiscordClient from "./classes/Client/Client";
 import dotenv from "dotenv";
 import intents from "./utils/ClientIntents";

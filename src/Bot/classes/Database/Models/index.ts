@@ -8,6 +8,8 @@ import TextLevelRolesSchema from "./TextLevelRolesSchema";
 import TextLevelRanksSchema from "./TextLevelRanksSchema";
 import TextLevelChannelsSchema from "./TextLevelChannelsSchema";
 import EnabledLevelingGuildsSchema from "./EnabledLevelingGuildsSchema";
+import MemberJoinRolesSchema from "./MemberJoinRolesSchema";
+import BotJoinRolesSchema from "./BotJoinRolesSchema";
 class Models {
   prefixes = PrefixesConfiguration;
   welcomes = WelcomeChannelsConfiguration;
@@ -19,6 +21,8 @@ class Models {
   textLevelRanks = TextLevelRanksSchema;
   textLevelRoles = TextLevelRolesSchema;
   enabledLevelingGuilds = EnabledLevelingGuildsSchema;
+  memberJoinRoles = MemberJoinRolesSchema;
+  botJoinRoles = BotJoinRolesSchema;
 }
 
 export default Models;

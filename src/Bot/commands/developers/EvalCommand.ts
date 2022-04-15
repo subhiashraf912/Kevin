@@ -7,7 +7,7 @@ export default class EvalCommand extends BaseCommand {
   constructor() {
     super({
       name: "eval",
-      category: "Management",
+      category: "Developers",
       permissions: new PermissionsGuard({
         userPermissions: [],
         botPermissions: [],
@@ -25,12 +25,8 @@ export default class EvalCommand extends BaseCommand {
       if (typeof output !== "string") {
         output = (await import("util")).inspect(output, { depth: 0 });
       }
-      output.includes(client.token)
-        ? (output = output.replace(client.token, "TOKEN"))
-        : null;
-      embed
-        .setTitle("Compied code result")
-        .setDescription(`\`\`\`js\n${output}\`\`\``);
+      output.includes(client.token) ? (output = output.replace(client.token, "TOKEN")) : null;
+      embed.setTitle("Compied code result").setDescription(`\`\`\`js\n${output}\`\`\``);
       await message.channel.send({ embeds: [embed] });
     } catch (error) {
       console.log("[Error] Something Went Wrong, ", error);

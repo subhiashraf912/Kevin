@@ -10,15 +10,9 @@ export default class TextLevelsHandler {
     if (!message.guild) return;
     const guildId = message.guild.id;
     const userId = message.author.id;
-    const guildLevelingSystemSettings =
-      await this.client.configurations.enabledLevelingGuilds.get(
-        message.guild.id
-      );
+    const guildLevelingSystemSettings = await this.client.configurations.textLevels.levelingGuilds.get(message.guild.id);
     if (!guildLevelingSystemSettings.enabled) return;
-    const { channels: levelsChannels } =
-      await this.client.configurations.textLevels.channels.get(
-        message.guild.id
-      );
+    const { channels: levelsChannels } = await this.client.configurations.textLevels.channels.get(message.guild.id);
     if (levelsChannels[0]) {
       if (!levelsChannels.includes(message.channel.id)) return;
     }
@@ -31,15 +25,9 @@ export default class TextLevelsHandler {
       let xp = rank.xp;
       let xpToBeAdded;
       if (message.channel.id === "800314338534883348") {
-        xpToBeAdded = this.getRandomInt(
-          guildLevelingSystemSettings.minXpPerMessage * 2,
-          guildLevelingSystemSettings.maxXpPerMessage * 2
-        );
+        xpToBeAdded = this.getRandomInt(guildLevelingSystemSettings.minXpPerMessage * 2, guildLevelingSystemSettings.maxXpPerMessage * 2);
       } else {
-        xpToBeAdded = this.getRandomInt(
-          guildLevelingSystemSettings.minXpPerMessage,
-          guildLevelingSystemSettings.maxXpPerMessage
-        );
+        xpToBeAdded = this.getRandomInt(guildLevelingSystemSettings.minXpPerMessage, guildLevelingSystemSettings.maxXpPerMessage);
       }
       xp += xpToBeAdded;
 
@@ -61,8 +49,7 @@ export default class TextLevelsHandler {
         rankBackground: rank.rankBackground,
       });
     }
-    const { roles: levelRoles } =
-      await this.client.configurations.textLevels.roles.get(guildId);
+    const { roles: levelRoles } = await this.client.configurations.textLevels.roles.get(guildId);
     if (levelRoles) await this.assignRoles(message, levelRoles);
   };
 
@@ -76,17 +63,14 @@ export default class TextLevelsHandler {
     for (const [key, value] of Object.entries(roles)) {
       if (parseInt(key) <= memberRank.level) {
         const role = message.guild.roles.cache.get(value as string);
-        if (role && !message.member.roles.cache.has(role.id))
-          rolesToBeAdded.push(role);
+        if (role && !message.member.roles.cache.has(role.id)) rolesToBeAdded.push(role);
       }
     }
     if (rolesToBeAdded[0])
       try {
         await message.member.roles.add(rolesToBeAdded);
         await message.member?.send({
-          content: `Congrats! You have got ${rolesToBeAdded.map(
-            (role) => `${role?.name} `
-          )} role in ${message.guild?.name}!`,
+          content: `Congrats! You have got ${rolesToBeAdded.map((role) => `${role?.name} `)} role in ${message.guild?.name}!`,
         });
       } catch {}
   }
