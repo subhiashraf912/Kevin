@@ -37,7 +37,7 @@ export default class ViewMenuRolesCommand extends BaseSlashCommand {
         guildId: interaction.guildId,
       });
       if (!guildData || !guildData[0]) {
-        interaction.reply({
+        interaction.followUp({
           content: "There are no roles for this server in the database.",
           ephemeral: true,
         });
@@ -58,7 +58,7 @@ export default class ViewMenuRolesCommand extends BaseSlashCommand {
         menuCustomId,
       });
       if (!guildData) {
-        interaction.reply({
+        interaction.followUp({
           content: "There are no roles for this server in the database.",
           ephemeral: true,
         });

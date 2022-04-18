@@ -5,7 +5,7 @@ import BaseSlashCommand from "../../classes/Base/BaseSlashCommand";
 export default class MenuRolesPanelCommand extends BaseSlashCommand {
   constructor() {
     super({
-      name: "create-button-role",
+      name: "create-button-roles-panel",
       description:
         "Creates a button role and adds it to a button roles panel using it's custom id!",
       userPermissions: ["MANAGE_ROLES"],
@@ -49,11 +49,13 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
       guildId: interaction.guildId,
       buttonRolesCustomId,
     });
-    if (previousData)
-      return interaction.reply({
+    if (previousData) {
+      interaction.followUp({
         content: "There's already a button roles data with this ID",
         ephemeral: true,
       });
+      return;
+    }
     const guildData = await client.database.models.buttonRoles.create({
       guildId: interaction.guildId,
       buttonRolesCustomId,
@@ -61,7 +63,7 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
       requiredRole,
       roles: [],
     });
-    interaction.reply({
+    interaction.followUp({
       content:
         "Created a new Button Roles thingy with the id: {customId}".replace(
           "{customId}",

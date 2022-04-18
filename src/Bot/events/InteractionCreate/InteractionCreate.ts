@@ -14,7 +14,7 @@ export default class MessageEvent extends BaseEvent {
 
   async run(client: DiscordClient, interaction: Interaction) {
     if (interaction.isCommand()) {
-      await interaction.deferReply().catch(() => {});
+      await interaction.deferReply({ ephemeral: true }).catch(() => {});
 
       const cmd = client.slashCommands.get(interaction.commandName);
       if (!cmd)
@@ -116,7 +116,7 @@ export default class MessageEvent extends BaseEvent {
             memberRoles.push(buttonRole.roleId);
         });
       }
-      if (maxRoles > memberRoles.length)
+      if (maxRoles >= memberRoles.length)
         return interaction.reply({
           content: `The maximum roles allowed in this section is ${maxRoles.toString()} and you have ${
             memberRoles.length

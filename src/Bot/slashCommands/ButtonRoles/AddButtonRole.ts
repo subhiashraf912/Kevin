@@ -77,13 +77,13 @@ export default class AddMenuRoleCommand extends BaseSlashCommand {
       }
       await guildData.save();
     } else {
-      interaction.reply({
+      interaction.followUp({
         content:
           "There's no button roles panel with this custom id, use /create-button-roles to create a new one",
         ephemeral: true,
       });
     }
-    interaction.reply({
+    interaction.followUp({
       content: `Role: ${role.toString()} has been added to the button roles panel with custom id: ${menuCustomId}`,
       ephemeral: true,
     });

@@ -129,14 +129,13 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
         .setEmoji(option.emoji)
         .setLabel(option.label)
         .setStyle("PRIMARY");
-
+      console.log(component);
       messageActionRowComponents.push(component);
     });
 
     const components = [
       new MessageActionRow().addComponents(messageActionRowComponents),
     ];
-
     const panelEmbed = new MessageEmbed()
       .setTitle(menuCustomId)
       .setDescription(`\n**${description}**\n\n\n`)

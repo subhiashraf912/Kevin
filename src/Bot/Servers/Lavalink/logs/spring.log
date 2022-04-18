@@ -5,3 +5,4 @@
 2022-04-18 15:14:17.266  INFO 11740 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51365 -- CloseStatus[code=1006, reason=]
 2022-04-18 15:14:17.267  INFO 11740 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
 2022-04-18 15:14:21.128  INFO 11740 --- [XNIO-1 task-51] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51427
+2022-04-18 15:14:21.143  INFO 11740 --- [XNIO-1 task-51] lavalink.server.io.SocketServer          : Connection successfully established from erela.js

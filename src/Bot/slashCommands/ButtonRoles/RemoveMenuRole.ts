@@ -39,7 +39,7 @@ export default class RemoveMenuRoleCommand extends BaseSlashCommand {
       menuCustomId,
     });
     if (!guildData) {
-      interaction.reply({
+      interaction.followUp({
         content:
           "There's no button roles panel with that custom id you provided!",
         ephemeral: true,
@@ -49,7 +49,7 @@ export default class RemoveMenuRoleCommand extends BaseSlashCommand {
     const guildRoles = guildData.roles;
     const findRole = guildRoles.find((x: any) => x.roleId === role.id);
     if (!findRole) {
-      interaction.reply({
+      interaction.followUp({
         content: "That role is not added to the roles list!",
         ephemeral: true,
       });
@@ -58,7 +58,7 @@ export default class RemoveMenuRoleCommand extends BaseSlashCommand {
     const filteredRoles = guildRoles.filter((x: any) => x.roleId !== role.id);
     guildData.roles = filteredRoles;
     await guildData.save();
-    interaction.reply({
+    interaction.followUp({
       content: `Role: ${role.toString()} has been removed from the button roles panel with custom id: ${menuCustomId}`,
       ephemeral: true,
     });
