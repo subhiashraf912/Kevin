@@ -1,10 +1,7 @@
-2022-04-15 00:02:07.899  INFO 11740 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"689769817766363197"}
-2022-04-15 00:02:07.904  INFO 11740 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"sessionId":"088564f6d407abc8693a494fc6afa378","op":"voiceUpdate","guildId":"689769817766363197","event":{"token":"34fea65254f0e8f6","guild_id":"689769817766363197","endpoint":"rotterdam6542.discord.media:443"}}
-2022-04-15 09:04:07.919  INFO 11740 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:62633 -- CloseStatus[code=1006, reason=]
-2022-04-15 09:04:07.921  INFO 11740 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2022-04-15 09:04:08.300  INFO 11740 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:62637 -- CloseStatus[code=1006, reason=]
-2022-04-15 09:04:08.300  INFO 11740 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2022-04-15 09:04:26.785  INFO 11740 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59944
-2022-04-15 09:04:26.785  INFO 11740 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
-2022-04-15 09:04:27.394  INFO 11740 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59948
-2022-04-15 09:04:27.394  INFO 11740 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-04-18 15:09:48.852  INFO 11740 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59412 -- CloseStatus[code=1006, reason=]
+2022-04-18 15:09:48.857  INFO 11740 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-04-18 15:09:53.265  INFO 11740 --- [XNIO-1 task-50] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51365
+2022-04-18 15:09:53.280  INFO 11740 --- [XNIO-1 task-50] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-04-18 15:14:17.266  INFO 11740 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51365 -- CloseStatus[code=1006, reason=]
+2022-04-18 15:14:17.267  INFO 11740 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-04-18 15:14:21.128  INFO 11740 --- [XNIO-1 task-51] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51427

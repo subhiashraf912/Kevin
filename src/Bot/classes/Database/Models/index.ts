@@ -10,10 +10,12 @@ import TextLevelChannelsSchema from "./TextLevelChannelsSchema";
 import EnabledLevelingGuildsSchema from "./EnabledLevelingGuildsSchema";
 import MemberJoinRolesSchema from "./MemberJoinRolesSchema";
 import BotJoinRolesSchema from "./BotJoinRolesSchema";
+import ButtonRolesSchema from "./ButtonRolesSchema";
 class Models {
   prefixes = PrefixesConfiguration;
   welcomes = WelcomeChannelsConfiguration;
   menuRoles = MenuRolesSchema;
+  buttonRoles = ButtonRolesSchema;
   voiceLevelChannels = VoiceLevelChannelsSchema;
   voiceLevelRanks = VoiceLevelRanksSchema;
   voiceLevelRoles = VoiceLevelRolesSchema;

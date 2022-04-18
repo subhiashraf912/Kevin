@@ -1,5 +1,11 @@
 import BaseEvent from "../../classes/Base/BaseEvent";
-import { GuildMember, Interaction, PermissionString, Role } from "discord.js";
+import {
+  GuildMember,
+  GuildMemberRoleManager,
+  Interaction,
+  PermissionString,
+  Role,
+} from "discord.js";
 import DiscordClient from "../../classes/Client/Client";
 export default class MessageEvent extends BaseEvent {
   constructor() {
@@ -47,6 +53,82 @@ export default class MessageEvent extends BaseEvent {
       await interaction.deferReply({ ephemeral: false });
       const command = client.slashCommands.get(interaction.commandName);
       if (command) command.run(client, interaction, []);
+    }
+
+    if (
+      interaction.isButton() &&
+      interaction.customId.startsWith("buttonroles")
+    ) {
+      const memberId = interaction.member?.user?.id;
+      const member = interaction.member!;
+      const guildId = interaction.guildId!;
+      const guild = interaction.guild!;
+      const roleId = interaction.customId.split("_")[1];
+      const role = guild.roles.cache.get(roleId)!;
+      const guildCustomMenuId = interaction.customId.split("_")[2];
+      const data = await client.database.models.buttonRoles.findOne({
+        guildId,
+        buttonRolesCustomId: guildCustomMenuId,
+      });
+      if (!data) {
+        interaction.reply({
+          content:
+            "No data were found in the database or there's a connection error in the client.",
+          ephemeral: true,
+        });
+        return;
+      }
+      const requiredRoleId = data.requiredRole;
+      const maxRoles = data.maxRoles || 99;
+      const roles = data.roles;
+      const requiredRole = guild.roles.cache.get(requiredRoleId);
+      if (
+        requiredRole &&
+        Array.isArray(member.roles) &&
+        !member.roles.includes(requiredRoleId)
+      )
+        return interaction.reply({
+          content: `You need ${requiredRole.toString()} role to get this role.`,
+          ephemeral: true,
+        });
+      else if (
+        requiredRole &&
+        member.roles instanceof GuildMemberRoleManager &&
+        !member.roles.cache.get(requiredRoleId)
+      )
+        return interaction.reply({
+          content: `You need ${requiredRole.toString()} role to get this role.`,
+          ephemeral: true,
+        });
+      const memberRoles = [];
+      if (Array.isArray(member.roles)) {
+        roles.forEach((buttonRole) => {
+          if ((member.roles as string[]).includes(buttonRole.roleId))
+            memberRoles.push(buttonRole.roleId);
+        });
+      } else if (member.roles instanceof GuildMemberRoleManager) {
+        roles.forEach((buttonRole) => {
+          if (
+            (member.roles as GuildMemberRoleManager).cache.has(
+              buttonRole.roleId
+            )
+          )
+            memberRoles.push(buttonRole.roleId);
+        });
+      }
+      if (maxRoles > memberRoles.length)
+        return interaction.reply({
+          content: `The maximum roles allowed in this section is ${maxRoles.toString()} and you have ${
+            memberRoles.length
+          }`,
+          ephemeral: true,
+        });
+
+      await guild.members.cache.get(memberId!)?.roles.add(roleId);
+      interaction.reply({
+        content: `The role ${role.toString()} has been given to you.`,
+        ephemeral: true,
+      });
     }
 
     if (

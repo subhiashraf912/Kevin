@@ -1,4 +1,13 @@
-import { ColorResolvable, CommandInteraction, MessageActionRow, MessageActionRowComponentResolvable, MessageButton, MessageEmbed, MessageSelectMenu } from "discord.js";
+import {
+  ColorResolvable,
+  CommandInteraction,
+  EmbedFieldData,
+  MessageActionRow,
+  MessageActionRowComponentResolvable,
+  MessageButton,
+  MessageEmbed,
+  MessageSelectMenu,
+} from "discord.js";
 import DiscordClient from "../../classes/Client/Client";
 import BaseSlashCommand from "../../classes/Base/BaseSlashCommand";
 
@@ -45,13 +54,15 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
       options: [
         {
           name: "custom-id",
-          description: "the custom id of the menu, this custom id can have multiple roles. ex: colors",
+          description:
+            "the custom id of the menu, this custom id can have multiple roles. ex: colors",
           type: "STRING",
           required: true,
         },
         {
           name: "description",
-          description: "The description of the embed that will be sent in the menu.",
+          description:
+            "The description of the embed that will be sent in the menu.",
           type: "STRING",
           required: false,
         },
@@ -72,18 +83,24 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
     });
   }
 
-  async run(client: DiscordClient, interaction: CommandInteraction, args: Array<string>) {
+  async run(
+    client: DiscordClient,
+    interaction: CommandInteraction,
+    args: Array<string>
+  ) {
     const menuCustomId = interaction.options.getString("custom-id", true);
     const description = interaction.options.getString("description") || "";
     const color = interaction.options.getString("color") || "DEFAULT";
     let embedImageLink = interaction.options.getString("image-link") || "";
-    const guildData = await client.database.models.menuRoles.findOne({
+    const guildData = await client.database.models.buttonRoles.findOne({
       guildId: interaction.guildId,
       menuCustomId,
     });
 
     if (!guildData?.roles) {
-      interaction.followUp("There are no roles inside of our database for this server.");
+      interaction.followUp(
+        "There are no roles inside of our database for this server."
+      );
       return;
     }
     const options = guildData.roles.map((x: any) => {
@@ -92,23 +109,43 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
         label: role?.name!,
         value: role?.id!,
         emoji: x.roleEmoji!,
+        description: x.roleDescription || "No description",
       };
     });
 
-    const messageActionRowComponents: MessageActionRowComponentResolvable[] = [];
+    const messageActionRowComponents: MessageActionRowComponentResolvable[] =
+      [];
+
+    const fields: EmbedFieldData[] = options.map((option) => {
+      return {
+        name: option.label,
+        value: option.description,
+      };
+    });
 
     options.forEach((option) => {
-      const component = new MessageButton().setCustomId(`buttonroles_${option.value}_${menuCustomId}`).setEmoji(option.emoji).setLabel(option.label).setStyle("PRIMARY");
+      const component = new MessageButton()
+        .setCustomId(`buttonroles_${option.value}_${menuCustomId}`)
+        .setEmoji(option.emoji)
+        .setLabel(option.label)
+        .setStyle("PRIMARY");
+
       messageActionRowComponents.push(component);
     });
 
-    const components = [new MessageActionRow().addComponents(messageActionRowComponents)];
+    const components = [
+      new MessageActionRow().addComponents(messageActionRowComponents),
+    ];
 
     const panelEmbed = new MessageEmbed()
-      .setDescription(`\`\`\`${menuCustomId}\`\`\`\n${description}`)
-      .setThumbnail(interaction.guild?.iconURL({ dynamic: true, size: 4096 }) || "")
+      .setTitle(menuCustomId)
+      .setDescription(`\n**${description}**\n\n\n`)
+      .setThumbnail(
+        interaction.guild?.iconURL({ dynamic: true, size: 4096 }) || ""
+      )
       .setImage(embedImageLink)
-      .setColor(color as ColorResolvable);
+      .setColor(color as ColorResolvable)
+      .addFields(fields);
 
     interaction.followUp({ content: "Sent", ephemeral: true });
     interaction.channel?.send({ embeds: [panelEmbed], components });
