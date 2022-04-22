@@ -6,7 +6,9 @@
   "dependencies": {
     "@discordjs/opus": "^0.7.0",
     "@discordjs/voice": "^0.7.5",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "canvas": "^2.9.0",
+    "discord-yt-poster": "^3.1.2",
     "discord-ytdl-core": "^5.0.4",
     "discord.js": "^13.6.0",
     "distube": "^3.3.0",
@@ -19,6 +21,7 @@
     "erela.js-filters": "^1.2.7",
     "erela.js-spotify": "^1.2.0",
     "ffmpeg-static": "^4.4.1",
+    "fluent-ffmpeg": "^2.1.2",
     "gifencoder": "^2.0.1",
     "konva": "^8.3.2",
     "libsodium-wrappers": "^0.7.9",
@@ -31,10 +34,12 @@
     "opusscript": "^0.0.8",
     "pm2": "^5.1.2",
     "socket.io-client": "^4.4.1",
+    "wetransfert": "^2.3.8",
     "youtube-sr": "^4.1.13",
     "ytdl-core": "^4.10.1"
   },
   "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.20",
     "@types/gifencoder": "^2.0.1",
     "@types/moment-duration-format": "^2.2.3",
     "@types/ms": "^0.7.31",
