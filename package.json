@@ -58,7 +58,7 @@
     "copy-azecord-images": "copyfiles --error --up 2 src/Bot/classes/Utility/AzeCord/aze-canvas/assets/img/*.* dist/src/Bot",
     "copy-azecord-fonts": "copyfiles --error --up 2 src/Bot/classes/Utility/AzeCord/aze-canvas/assets/fonts/*.* dist/src/Bot",
     "postbuild": "yarn copy-canvacord-images && yarn copy-canvacord-fonts && yarn copy-azecord-images && yarn copy-azecord-fonts",
-    "lavalink": "java Lavalink src/Bot/Servers/Lavalink/Lavalink.jar",
+    "lavalink": "pm2 start --name=Lavalink src/Bot/Servers/Lavalink/Lavalink.jar --interpreter=java --node-args=-jar",
     "startt": "yarn build && yarn start"
   }
 }

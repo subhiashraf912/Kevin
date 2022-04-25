@@ -22,7 +22,7 @@ export default (client: DiscordClient) => {
     nodes: [
       {
         host: "localhost",
-        port: 2333,
+        port: 8080,
         password: "youshallnotpass",
       },
     ],
