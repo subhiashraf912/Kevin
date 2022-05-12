@@ -8,6 +8,7 @@
     "@discordjs/voice": "^0.7.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "canvas": "^2.9.0",
+    "discord-html-transcripts": "^2.4.2",
     "discord-yt-poster": "^3.1.2",
     "discord-ytdl-core": "^5.0.4",
     "discord.js": "^13.6.0",
