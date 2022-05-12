@@ -23,11 +23,12 @@ export default class Command extends BaseCommand {
     const attachment = (await createTranscript(channel, {
       returnType: "string",
       minify: true,
+      limit: 50,
     })) as string;
     const img = (await nodeHtmlToImage({
       html: attachment,
-      quality: 10,
       type: "png",
+      quality: 20,
     })) as Buffer;
     channel.send({
       files: [img],
