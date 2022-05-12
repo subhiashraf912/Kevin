@@ -35,3 +35,6 @@
 2022-05-12 05:45:31.627  INFO 11432 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-05-12 05:45:31.635  INFO 11432 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
 2022-05-12 05:45:31.661  INFO 11432 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58360
+2022-05-12 05:45:31.661  INFO 11432 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58361
+2022-05-12 05:45:31.756  INFO 11432 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-05-12 05:45:31.756  INFO 11432 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from erela.js

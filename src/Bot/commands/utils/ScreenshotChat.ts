@@ -1,9 +1,10 @@
 import { Message } from "discord.js";
-import discordTranscripts from "discord-html-transcripts";
+import { createTranscript } from "discord-html-transcripts";
 import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 import { ValidTextChannels } from "discord-html-transcripts/dist/types";
+import nodeHtmlToImage from "node-html-to-image";
 
 export default class Command extends BaseCommand {
   constructor() {
@@ -19,9 +20,17 @@ export default class Command extends BaseCommand {
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
     const channel = message.channel as ValidTextChannels;
-    const attachment = await discordTranscripts.createTranscript(channel);
+    const attachment = (await createTranscript(channel, {
+      returnType: "string",
+      minify: true,
+    })) as string;
+    const img = (await nodeHtmlToImage({
+      html: attachment,
+      quality: 10,
+      type: "png",
+    })) as Buffer;
     channel.send({
-      files: [attachment],
+      files: [img],
     });
   }
 }
