@@ -1,5 +1,5 @@
 import BaseEvent from "../../classes/Base/BaseEvent";
-import { GuildMember, Invite } from "discord.js";
+import { GuildMember, Invite, TextChannel } from "discord.js";
 import DiscordClient from "../../classes/Client/Client";
 
 export default class MessageEvent extends BaseEvent {
@@ -8,9 +8,18 @@ export default class MessageEvent extends BaseEvent {
   }
 
   async run(client: DiscordClient, member: GuildMember, invite: Invite) {
+    if (member.guild.id === "783991881028993045") {
+      const lobby = member.guild.channels.cache.get("783991881776234549");
+      if (lobby && lobby instanceof TextChannel)
+        lobby?.send({
+          content: `Welcome to the server ${member.toString()} <a:ASenRun:852845902041186325> hope you enjoy your stay!`,
+        });
+    }
     try {
       const memberType = member.user.bot ? "bot" : "member";
-      let configurations = await client.configurations.joinRoles[memberType].get(member.guild.id);
+      let configurations = await client.configurations.joinRoles[
+        memberType
+      ].get(member.guild.id);
       if (configurations) {
         const { roles } = configurations;
         if (roles[0]) await member.roles.add(roles);
@@ -21,7 +30,9 @@ export default class MessageEvent extends BaseEvent {
     try {
       let configurations = client.configurations.welcomes.get(member.guild.id);
       if (!configurations) {
-        configurations = await client.configurations.welcomes.fetch(member.guild.id);
+        configurations = await client.configurations.welcomes.fetch(
+          member.guild.id
+        );
         if (!configurations) return;
       }
       const channel = configurations.channel;
