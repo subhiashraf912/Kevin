@@ -61,34 +61,39 @@ export default class Command extends BaseCommand {
       });
 
       const invokeCollectorCallBack = async () => {
-        const channel =
-          (questions[0].answer?.mentions.channels.first() as TextChannel) ||
-          questions[0].answer?.guild?.channels.cache.find(
-            (c) =>
-              c.name.toLowerCase() ===
-                questions[0].answer?.content.toLowerCase() ||
-              questions[0].answer?.content.toLowerCase() === c.id.toLowerCase()
-          ) ||
-          message.channel;
+        try {
+          const channel =
+            (questions[0].answer?.mentions.channels.first() as TextChannel) ||
+            questions[0].answer?.guild?.channels.cache.find(
+              (c) =>
+                c.name.toLowerCase() ===
+                  questions[0].answer?.content.toLowerCase() ||
+                questions[0].answer?.content.toLowerCase() ===
+                  c.id.toLowerCase()
+            ) ||
+            message.channel;
 
-        const text = questions[1].answer?.content!;
-        const attachment = new MessageAttachment(
-          message.attachments.first()?.url || message.content
-        );
-        const sentMessage = await channel.send({
-          content: text,
-          attachments: [attachment],
-        });
-        const channelId = channel.id;
-        const guildId = message.guildId!;
-        const messageId = sentMessage.id;
-        await client.database.models.buttonRoles.create({
-          channelId,
-          guildId,
-          messageId,
-        });
+          const text = questions[1].answer?.content!;
+          const attachment = new MessageAttachment(
+            message.attachments.first()?.url || message.content
+          );
+          const sentMessage = await channel.send({
+            content: text,
+            attachments: [attachment],
+          });
+          const channelId = channel.id;
+          const guildId = message.guildId!;
+          const messageId = sentMessage.id;
+          await client.database.models.buttonRoles.create({
+            channelId,
+            guildId,
+            messageId,
+          });
 
-        message.reply({ content: "Message Sent." });
+          message.reply({ content: "Message Sent." });
+        } catch (err: any) {
+          message.channel.send(err);
+        }
       };
       collector.on("end", async (col) => {
         invokeCollectorCallBack();
