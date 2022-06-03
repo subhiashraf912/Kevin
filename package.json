@@ -13,7 +13,7 @@
     "discord-ytdl-core": "^5.0.4",
     "discord.js": "^13.6.0",
     "distube": "^3.3.0",
-    "djs-invite-tracker": "^1.0.3",
+    "djs-invite-tracker": "github:subhiashraf912/invitetracker",
     "dotenv": "^14.1.0",
     "erela.js": "^2.3.3",
     "erela.js-apple": "^1.2.6",
