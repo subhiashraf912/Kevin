@@ -74,8 +74,13 @@ export default class Command extends BaseCommand {
             message.channel;
           console.log(questions[1].answer);
           const text = questions[1].answer?.content!;
+          console.log(
+            questions[2].answer?.attachments.first()?.url ||
+              questions[2].answer?.content!
+          );
           const attachment = new MessageAttachment(
-            message.attachments.first()?.url || message.content
+            questions[2].answer?.attachments.first()?.url ||
+              questions[2].answer?.content!
           );
           const sentMessage = await channel.send({
             content: text,
