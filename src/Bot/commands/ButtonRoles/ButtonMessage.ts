@@ -79,7 +79,7 @@ export default class Command extends BaseCommand {
           );
           const sentMessage = await channel.send({
             content: text,
-            attachments: [attachment],
+            files: [attachment],
           });
           const channelId = channel.id;
           const guildId = message.guildId!;
@@ -92,14 +92,14 @@ export default class Command extends BaseCommand {
 
           message.reply({ content: "Message Sent." });
         } catch (err: any) {
-          message.channel.send(err);
+          console.log(err);
         }
       };
       collector.on("end", async (col) => {
         invokeCollectorCallBack();
       });
     } catch (err: any) {
-      message.reply(`Error: ${err.message}`);
+      console.log(err);
     }
   }
 }
