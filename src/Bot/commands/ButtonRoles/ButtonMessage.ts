@@ -72,7 +72,7 @@ export default class Command extends BaseCommand {
                   c.id.toLowerCase()
             ) ||
             message.channel;
-
+          console.log(questions[1].answer);
           const text = questions[1].answer?.content!;
           const attachment = new MessageAttachment(
             message.attachments.first()?.url || message.content
