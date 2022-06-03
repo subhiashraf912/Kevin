@@ -9,6 +9,7 @@ type CommandCategory =
   | "Text Levels"
   | "Developers"
   | "Join Roles"
-  | "Youtube Logger";
+  | "Youtube Logger"
+  | "Button Roles";
 
 export default CommandCategory;

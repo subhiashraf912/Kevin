@@ -1,11 +1,17 @@
 import mongoose from "mongoose";
-import ButtonRoles from "../../../utils/types/API/ButtonRoles";
-const Schema = new mongoose.Schema<ButtonRoles>({
-  guildId: String,
-  roles: Array,
-  buttonRolesCustomId: String,
-  maxRoles: Number,
-  requiredRole: String,
+import ButtonRolesConfiguration from "../../../utils/types/Data/ButtonRolesConfiguration";
+
+const reqString = {
+  type: String,
+  required: true,
+};
+
+const schema = new mongoose.Schema<ButtonRolesConfiguration>({
+  guildId: reqString,
+  channelId: reqString,
+  messageId: reqString,
 });
 
-export default mongoose.model<ButtonRoles>("button-roles", Schema);
+const name = "button-roles";
+
+export default mongoose.model<ButtonRolesConfiguration>(name, schema, name);
