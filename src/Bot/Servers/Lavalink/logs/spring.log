@@ -108,3 +108,53 @@
 2022-06-03 11:18:52.580  INFO 12356 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
 2022-06-03 11:18:52.959  INFO 12356 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59748
 2022-06-03 11:18:52.962  INFO 12356 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-06-14 14:32:59.528  INFO 42882 --- [main] lavalink.server.Launcher                 : Starting Launcher on aze with PID 42882 (/home/aze/Desktop/Kevin/src/Bot/Servers/Lavalink/Lavalink.jar started by aze in /home/aze/Desktop/Kevin/src/Bot/Servers/Lavalink)
+2022-06-14 14:32:59.530  INFO 42882 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-14 14:32:59.664  WARN 42882 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-14 14:33:00.275  INFO 42882 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.064 seconds (JVM running for 1.361)
+2022-06-14 14:33:00.276  INFO 42882 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-06-14 14:33:00.309  INFO 42882 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        608d24ddb2b7b63d5b4aa23151e8dfa924de5392-SNAPSHOT
+	Build:          1347
+	Build time:     26.05.2022 14:29:26 UTC
+	Branch          walkyst-koe-fork
+	Commit:         608d24d
+	Commit time:    27.04.2022 18:20:57 UTC
+	JVM:            17.0.3
+	Lavaplayer      1.3.98-devoxin
+
+2022-06-14 14:33:00.315  INFO 42882 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-14 14:33:00.639  WARN 42882 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-06-14 14:33:00.652  INFO 42882 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-06-14 14:33:00.652  INFO 42882 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 335 ms
+2022-06-14 14:33:00.700  WARN 42882 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-06-14 14:33:00.943  INFO 42882 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-06-14 14:33:01.106  INFO 42882 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-06-14 14:33:01.106  INFO 42882 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-06-14 14:33:01.111  INFO 42882 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-06-14 14:33:01.114  INFO 42882 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-06-14 14:33:01.197  INFO 42882 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-14 14:33:01.289  INFO 42882 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-06-14 14:33:01.294  INFO 42882 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-06-14 14:33:01.324  INFO 42882 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8080 (http) with context path ''
+2022-06-14 14:33:01.325  INFO 42882 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.046 seconds (JVM running for 2.411)
+2022-06-14 14:36:16.887  INFO 42882 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-14 14:36:16.888  INFO 42882 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-14 14:36:16.892  INFO 42882 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-06-14 14:36:16.903  INFO 42882 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56594
+2022-06-14 14:36:16.952  INFO 42882 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-06-14 14:36:17.050  INFO 42882 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56596
+2022-06-14 14:36:17.052  INFO 42882 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-06-14 14:37:39.297  INFO 42882 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:nightcore aze sama"
+2022-06-14 14:37:40.068  INFO 42882 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: nightcore aze sama
+2022-06-14 14:37:40.091  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"783991881028993045","volume":100}
+2022-06-14 14:37:40.095  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"play","guildId":"783991881028993045","track":"QAAAnAIAP05pZ2h0Y29yZSAtIFNldmVudGVlbiAvLyBERUFNTiAoQ29sbGFiIGZ0LiBBemUgLSBTYW1hKSAoTHlyaWNzKQADQW9pAAAAAAACo8gAC19ZZ210djNTdzN3AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9X1lnbXR2M1N3M3cAB3lvdXR1YmUAAAAAAAAAAA=="}
+2022-06-14 14:37:40.337  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"sessionId":"d0dcee41da566b7a6a3d9fcb9990d744","op":"voiceUpdate","guildId":"783991881028993045","event":{"token":"82fb981523299887","guild_id":"783991881028993045","endpoint":"bucharest5503.discord.media:443"}}
