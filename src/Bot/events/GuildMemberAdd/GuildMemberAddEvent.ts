@@ -1,6 +1,9 @@
 import BaseEvent from "../../classes/Base/BaseEvent";
 import { GuildMember, Invite, TextChannel } from "discord.js";
 import DiscordClient from "../../classes/Client/Client";
+import guildMembersCountUpdateService from "../../services/GuildMembersCountUpdateService";
+import guildRolesCountUpdateService from "../../services/GuildRolesCountUpdateService";
+import guildChannelsCountUpdateService from "../../services/GuildChannelsCountUpdateService";
 
 export default class MessageEvent extends BaseEvent {
   constructor() {
@@ -8,6 +11,9 @@ export default class MessageEvent extends BaseEvent {
   }
 
   async run(client: DiscordClient, member: GuildMember, invite: Invite) {
+    await guildMembersCountUpdateService(client, member);
+    await guildRolesCountUpdateService(client, member);
+    await guildChannelsCountUpdateService(client, member);
     if (member.guild.id === "783991881028993045") {
       const lobby = member.guild.channels.cache.get("783991881776234549");
       if (lobby && lobby instanceof TextChannel)

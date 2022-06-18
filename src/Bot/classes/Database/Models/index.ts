@@ -11,6 +11,7 @@ import EnabledLevelingGuildsSchema from "./EnabledLevelingGuildsSchema";
 import MemberJoinRolesSchema from "./MemberJoinRolesSchema";
 import BotJoinRolesSchema from "./BotJoinRolesSchema";
 import ButtonRolesSchema from "./ButtonRolesSchema";
+import GuildCountersSchema from "./GuildCountersSchema";
 class Models {
   prefixes = PrefixesConfiguration;
   welcomes = WelcomeChannelsConfiguration;
@@ -25,6 +26,7 @@ class Models {
   enabledLevelingGuilds = EnabledLevelingGuildsSchema;
   memberJoinRoles = MemberJoinRolesSchema;
   botJoinRoles = BotJoinRolesSchema;
+  guildCounters = GuildCountersSchema;
 }
 
 export default Models;

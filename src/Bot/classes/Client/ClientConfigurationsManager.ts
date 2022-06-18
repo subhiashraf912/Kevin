@@ -1,4 +1,11 @@
-import { JoinRolesManager, PrefixesManager, TextLevelsManager, VoiceLevelsManager, WelcomesManager } from "../Managers";
+import {
+  GuildCountersManager,
+  JoinRolesManager,
+  PrefixesManager,
+  TextLevelsManager,
+  VoiceLevelsManager,
+  WelcomesManager,
+} from "../Managers";
 import DiscordClient from "./Client";
 
 class ClientConfiguration {
@@ -8,6 +15,7 @@ class ClientConfiguration {
   voiceLevels;
   textLevels;
   joinRoles;
+  guildCounters;
   constructor(client: DiscordClient) {
     this.client = client;
     this.prefixes = new PrefixesManager(this.client);
@@ -15,6 +23,7 @@ class ClientConfiguration {
     this.voiceLevels = new VoiceLevelsManager(this.client);
     this.textLevels = new TextLevelsManager(this.client);
     this.joinRoles = new JoinRolesManager(this.client);
+    this.guildCounters = new GuildCountersManager(this.client);
   }
 }
 
