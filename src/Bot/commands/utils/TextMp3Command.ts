@@ -1,9 +1,8 @@
 import { Message } from "discord.js";
-import axios from "axios";
 import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
-
+import fetch from "node-fetch";
 export default class HelpCommand extends BaseCommand {
   constructor() {
     super({
