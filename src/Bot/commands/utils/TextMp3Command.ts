@@ -33,7 +33,7 @@ export default class HelpCommand extends BaseCommand {
         Referer: "https://ttsmp3.com/",
         "Referrer-Policy": "strict-origin-when-cross-origin",
       },
-      body: `msg=${args.join(" ")}&lang=Joanna&source=ttsmp3`,
+      body: `msg=${args.join(" ")}&lang=Justin&source=ttsmp3`,
       method: "POST",
     });
 
