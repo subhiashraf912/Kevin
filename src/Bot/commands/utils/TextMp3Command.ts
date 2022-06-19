@@ -38,6 +38,7 @@ export default class HelpCommand extends BaseCommand {
     });
 
     const data = { msg: args.join(" "), lang: "Joanna", source: "ttsmp3" };
-    console.log(res.text);
+    const text = await res.text();
+    message.reply(text);
   }
 }
