@@ -1,4 +1,4 @@
-import { Message } from "discord.js";
+import { Message, MessageAttachment } from "discord.js";
 import BaseCommand from "../../classes/Base/BaseCommand";
 import DiscordClient from "../../classes/Client/Client";
 import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
@@ -37,8 +37,11 @@ export default class HelpCommand extends BaseCommand {
       method: "POST",
     });
 
-    const data = { msg: args.join(" "), lang: "Joanna", source: "ttsmp3" };
-    const text = await res.text();
-    message.reply(text);
+    const data = await res.json();
+    const attachment = new MessageAttachment(
+      data.URL,
+      `${message.member?.user.tag}'s text.mp3`
+    );
+    await message.reply({ files: [attachment] });
   }
 }
