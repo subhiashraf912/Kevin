@@ -6,7 +6,7 @@ import PermissionsGuard from "../../classes/Guard/PermissionsGuard";
 export default class TestCommand extends BaseCommand {
   constructor() {
     super({
-      name: "dedlete-counters",
+      name: "delete-counters",
       category: "Moderators",
       permissions: new PermissionsGuard({
         userPermissions: ["ADMINISTRATOR"],
@@ -29,18 +29,30 @@ export default class TestCommand extends BaseCommand {
             content: "There are no guild counters set for this server!",
           });
       }
-      await configurations.botsCounter.channel?.delete(
-        `Guild Counters removed by: ${message.author.tag}`
-      );
-      await configurations.channelsCounter.channel?.delete(
-        `Guild Counters removed by: ${message.author.tag}`
-      );
-      await configurations.membersCounter.channel?.delete(
-        `Guild Counters removed by: ${message.author.tag}`
-      );
-      await configurations.rolesCounter.channel?.delete(
-        `Guild Counters removed by: ${message.author.tag}`
-      );
+      try {
+        await configurations.botsCounter.channel?.delete(
+          `Guild Counters removed by: ${message.author.tag}`
+        );
+      } catch {}
+
+      try {
+        await configurations.channelsCounter.channel?.delete(
+          `Guild Counters removed by: ${message.author.tag}`
+        );
+      } catch {}
+
+      try {
+        await configurations.membersCounter.channel?.delete(
+          `Guild Counters removed by: ${message.author.tag}`
+        );
+      } catch {}
+
+      try {
+        await configurations.rolesCounter.channel?.delete(
+          `Guild Counters removed by: ${message.author.tag}`
+        );
+      } catch {}
+
       await client.configurations.guildCounters.delete(message.guildId!);
       await message.reply({ content: "Guild counters got removed!" });
     } catch (err) {
