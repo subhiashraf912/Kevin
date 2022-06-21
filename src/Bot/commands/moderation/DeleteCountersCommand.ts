@@ -30,6 +30,9 @@ export default class TestCommand extends BaseCommand {
           });
       }
       try {
+        await configurations.botsCounter.channel?.parent?.delete(
+          `Guild Counters removed by: ${message.author.tag}`
+        );
         await configurations.botsCounter.channel?.delete(
           `Guild Counters removed by: ${message.author.tag}`
         );
