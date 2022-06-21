@@ -35,19 +35,19 @@ export default class TestCommand extends BaseCommand {
 
       const botsCounterChannel = await message.guild?.channels.create(
         `Bots Count: ${botsCount}`,
-        { parent }
+        { parent, type: "GUILD_VOICE" }
       );
       const channelsCounterChannel = await message.guild?.channels.create(
         `Channels Count: ${channelsCount}`,
-        { parent }
+        { parent, type: "GUILD_VOICE" }
       );
       const membersCountChannel = await message.guild?.channels.create(
         `Members Count: ${membersCount}`,
-        { parent }
+        { parent, type: "GUILD_VOICE" }
       );
       const rolesCountChannel = await message.guild?.channels.create(
         `Roles Count: ${rolesCount}`,
-        { parent }
+        { parent, type: "GUILD_VOICE" }
       );
 
       await client.configurations.guildCounters.create({
@@ -69,6 +69,7 @@ export default class TestCommand extends BaseCommand {
         },
         guildId: message.guildId!,
       });
+      await message.reply({ content: "Guild Counters have been created!" });
     } catch (err) {
       await message.reply(`Error occured: ${err}`);
     }
