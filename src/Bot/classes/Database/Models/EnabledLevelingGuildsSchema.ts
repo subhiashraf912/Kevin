@@ -6,7 +6,7 @@ const LevelingGuildsSettingsSchema =
     guildId: String,
     enabled: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     maxXpPerMessage: {
       type: Number,
