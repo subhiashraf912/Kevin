@@ -88,6 +88,7 @@ class GuildCountersManager {
       let configuration: GuildCountersConfiguration | null = await this.create(
         newOptions
       );
+      //@ts-ignore
       configuration =
         await this.client.database.models.guildCounters.findOneAndUpdate(
           { guildId: options.guildId },
