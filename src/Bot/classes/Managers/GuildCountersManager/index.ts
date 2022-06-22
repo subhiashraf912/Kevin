@@ -85,14 +85,16 @@ class GuildCountersManager {
         membersCounter: { channelId: null, text: null },
         rolesCounter: { channelId: null, text: null },
       };
-      let configuration = await this.create(newOptions);
+      let configuration: GuildCountersConfiguration | null = await this.create(
+        newOptions
+      );
       configuration =
-        (await this.client.database.models.guildCounters.findOneAndUpdate(
+        await this.client.database.models.guildCounters.findOneAndUpdate(
           { guildId: options.guildId },
           options,
           { new: true }
-        )) as GuildCountersConfiguration;
-      return configuration;
+        );
+      return configuration!;
     } else {
       const configuration = this.formatConfiguration(databaseConfiguration);
       this.cache.set(guildId, configuration);
