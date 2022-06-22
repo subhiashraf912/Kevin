@@ -112,7 +112,7 @@ export default class MenuRolesPanelCommand extends BaseSlashCommand {
     let requiredRole = interaction.options.getRole("required-role");
     let embedImageLink = interaction.options.getString("image-link") || "";
     const guildData = await client.database.models.menuRoles.findOne({
-      guildId: interaction.guildId,
+      guildId: interaction.guildId!,
       menuCustomId,
     });
 

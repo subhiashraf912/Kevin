@@ -63,7 +63,7 @@ export default class AddMenuRoleCommand extends BaseSlashCommand {
     };
 
     const guildData = await client.database.models.menuRoles.findOne({
-      guildId: interaction.guildId,
+      guildId: interaction.guildId!,
       menuCustomId,
     });
 

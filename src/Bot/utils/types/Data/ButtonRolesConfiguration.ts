@@ -1,5 +1,3 @@
-import { Snowflake } from "discord.js";
-
 interface ButtonRolesConfiguration {
   guildId: string;
   channelId: string;

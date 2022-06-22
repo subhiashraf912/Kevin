@@ -113,7 +113,7 @@ export default class Command extends BaseCommand {
         "null";
 
       const data = await client.database.models.buttonRoles.findOne({
-        guildId: message.guildId,
+        guildId: message.guildId!,
         messageId,
       });
       if (!data) {

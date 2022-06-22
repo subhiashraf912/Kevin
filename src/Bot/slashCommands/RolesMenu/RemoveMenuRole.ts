@@ -35,7 +35,7 @@ export default class RemoveMenuRoleCommand extends BaseSlashCommand {
     const menuCustomId = interaction.options.getString("menu-custom-id", true);
 
     const guildData = await client.database.models.menuRoles.findOne({
-      guildId: interaction.guildId,
+      guildId: interaction.guildId!,
       menuCustomId,
     });
     if (!guildData) {

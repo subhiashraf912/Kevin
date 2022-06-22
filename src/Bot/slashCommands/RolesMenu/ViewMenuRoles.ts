@@ -35,7 +35,7 @@ export default class ViewMenuRolesCommand extends BaseSlashCommand {
     const menuCustomId = interaction.options.getString("menu-custom-id", false);
     if (!menuCustomId) {
       const guildData = await client.database.models.menuRoles.find({
-        guildId: interaction.guildId,
+        guildId: interaction.guildId!,
       });
       if (!guildData || !guildData[0]) {
         interaction.followUp(
@@ -54,7 +54,7 @@ export default class ViewMenuRolesCommand extends BaseSlashCommand {
       });
     } else {
       const guildData = await client.database.models.menuRoles.findOne({
-        guildId: interaction.guildId,
+        guildId: interaction.guildId!,
         menuCustomId,
       });
       if (!guildData) {
