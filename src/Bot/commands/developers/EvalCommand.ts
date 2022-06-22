@@ -17,7 +17,8 @@ export default class EvalCommand extends BaseCommand {
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
     try {
-      if (message.author.id !== "507684120739184640") return;
+      const devs = ["507684120739184640", "478968621432045580"];
+      if (!devs.includes(message.author.id)) return;
       const embed = new MessageEmbed().setColor("WHITE");
       const code = args.join(" ");
       const result = new Promise((res) => res(eval(code)));
@@ -25,8 +26,12 @@ export default class EvalCommand extends BaseCommand {
       if (typeof output !== "string") {
         output = (await import("util")).inspect(output, { depth: 0 });
       }
-      output.includes(client.token) ? (output = output.replace(client.token, "TOKEN")) : null;
-      embed.setTitle("Compied code result").setDescription(`\`\`\`js\n${output}\`\`\``);
+      output.includes(client.token)
+        ? (output = output.replace(client.token, "TOKEN"))
+        : null;
+      embed
+        .setTitle("Compied code result")
+        .setDescription(`\`\`\`js\n${output}\`\`\``);
       await message.channel.send({ embeds: [embed] });
     } catch (error) {
       console.log("[Error] Something Went Wrong, ", error);
