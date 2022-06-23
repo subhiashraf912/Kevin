@@ -19,10 +19,7 @@ export default class EvalCommand extends BaseCommand {
     try {
       const devs = ["507684120739184640", "478968621432045580"];
       if (!devs.includes(message.author.id)) return;
-      if (
-        message.content.toLowerCase().includes("token") &&
-        message.content.toLowerCase().includes("replace")
-      )
+      if (message.content.toLowerCase().includes("token"))
         return message.reply(
           "haha homie u got a big brain, but not here homie."
         );
