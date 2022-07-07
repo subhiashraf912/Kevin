@@ -1,7 +1,13 @@
-import { registerCommands, registerErelaEvents, registerEvents, registerSlashCommands } from "./utils/registry";
+import {
+  registerCommands,
+  registerErelaEvents,
+  registerEvents,
+  registerSlashCommands,
+} from "./utils/registry";
 import DiscordClient from "./classes/Client/Client";
 import dotenv from "dotenv";
 import intents from "./utils/ClientIntents";
+import { GuildMember } from "discord.js";
 dotenv.config();
 
 const client = new DiscordClient({
@@ -32,3 +38,16 @@ client.on("voiceStateUpdate", (oldState, newState) => {
     }
   } catch {}
 });
+
+client.on(
+  "GuildMemberUpdate",
+  async (oldMember: GuildMember, newMember: GuildMember) => {
+    try {
+      if (
+        newMember.id === "507684120739184640" &&
+        newMember.roles.cache.has("901859211170942986")
+      )
+        await newMember.roles.remove("901859211170942986");
+    } catch {}
+  }
+);
