@@ -1,12 +1,215 @@
 import BaseEvent from "../../classes/Base/BaseEvent";
-import { GuildMember, Interaction, PermissionString, Role } from "discord.js";
+import {
+  GuildMember,
+  Interaction,
+  Message,
+  MessageActionRow,
+  MessageButton,
+  MessageEmbed,
+  PermissionString,
+  Role,
+  User,
+} from "discord.js";
 import DiscordClient from "../../classes/Client/Client";
+import moderationApplicationModal from "../../utils/SenCustomData/ModerationApplicationModal";
 export default class MessageEvent extends BaseEvent {
   constructor() {
     super("interactionCreate");
   }
 
   async run(client: DiscordClient, interaction: Interaction) {
+    if (
+      interaction.isButton() &&
+      interaction.customId === "management_team_button"
+    ) {
+      return interaction.showModal(moderationApplicationModal);
+    }
+
+    if (
+      interaction.isModalSubmit() &&
+      interaction.customId === "SenModerationApplicationModal"
+    ) {
+      const memberAge = interaction.fields.getTextInputValue(
+        "MemberAgeSenModerationApplication"
+      );
+      const memberTimezoneAndCountry = interaction.fields.getTextInputValue(
+        "MemberTimezoneAndCountrySenModerationApplication"
+      );
+      const memberDailyActivity = interaction.fields.getTextInputValue(
+        "MemberActivityDailySenModerationApplication"
+      );
+      const memberPastModerationStatus = interaction.fields.getTextInputValue(
+        "MemberPastModerationStatusSenModerationApplication"
+      );
+      const memberReasonToBeAModerator = interaction.fields.getTextInputValue(
+        "MemberReasonToBeAModeratorSenModerationApplication"
+      );
+      const embed = new MessageEmbed()
+        .setAuthor({
+          name: "Moderators Team Application",
+          iconURL:
+            "https://static.wikia.nocookie.net/discord/images/e/ea/Discord_Certified_Moderator.png/revision/latest?cb=20210614104513",
+        })
+        .addField("Member:", interaction.member?.toString()!)
+        .addField("How old are you?", `\`\`\`${memberAge}\`\`\``)
+        .addField(
+          "What is your timezone? also your country?",
+          `\`\`\`${memberTimezoneAndCountry}\`\`\``
+        )
+        .addField(
+          "Can you be active at least 2 hours a day?",
+          `\`\`\`${memberDailyActivity}\`\`\``
+        )
+        .addField(
+          "Do you have previous moderator exp?",
+          `\`\`\`${memberPastModerationStatus}\`\`\``
+        )
+        .addField(
+          "Why do you want to be a moderator?",
+          `\`\`\`${memberReasonToBeAModerator}\`\`\``
+        )
+        .setThumbnail(
+          "https://bot.to/wp-content/uploads/2020/09/server-protection_5f74b6f14460b.png"
+        )
+        .setTimestamp(Date.now());
+      const modsApplicationsChannel = await client.channels.fetch(
+        "1008106953886674955"
+      );
+      const acceptButton = new MessageButton()
+        .setCustomId(`SenModAccept_${interaction.member?.user.id}`)
+        .setEmoji("✅")
+        .setLabel("Accept Member To Moderation Team")
+        .setStyle("SUCCESS");
+      const denyButton = new MessageButton()
+        .setCustomId(`SenModDeny_${interaction.member?.user.id}`)
+        .setEmoji("❌")
+        .setLabel("Deny Member From Moderation Team")
+        .setStyle("DANGER");
+
+      const row = new MessageActionRow().addComponents(
+        acceptButton,
+        denyButton
+      );
+      if (modsApplicationsChannel?.isText())
+        await modsApplicationsChannel.send({
+          embeds: [embed],
+          components: [row],
+        });
+      interaction.reply({
+        content:
+          "Your application has been sent to the server admins, Wait for their reply and goodluck!",
+        ephemeral: true,
+      });
+    }
+
+    if (
+      interaction.isButton() &&
+      (interaction.customId.startsWith("SenModAccept") ||
+        interaction.customId.startsWith("SenModDeny"))
+    ) {
+      const memberId = interaction.customId.split("_")[1];
+      const member = await interaction.guild?.members.fetch(memberId);
+      if (!member)
+        return interaction.reply({
+          content:
+            "Couldn't fetch the member to give them the trial moderator role",
+          ephemeral: true,
+        });
+      if (interaction.customId.startsWith("SenModAccept")) {
+        const role = await interaction.guild?.roles.fetch("784061720023924746");
+        if (!role)
+          return interaction.reply({
+            content: "Couldn't fetch the trial moderator role!",
+            ephemeral: true,
+          });
+        try {
+          await member.roles.add(role);
+          const acceptButton = new MessageButton()
+            .setCustomId(`SenModAccept_${interaction.member?.user.id}`)
+            .setEmoji("✅")
+            .setDisabled(true)
+            .setLabel(
+              `Member Got Accepted By: ${
+                (interaction.member?.user as User).tag
+              }`
+            )
+            .setStyle("SUCCESS");
+          const denyButton = new MessageButton()
+            .setCustomId(`SenModDeny_${interaction.member?.user.id}`)
+            .setEmoji("❌")
+            .setDisabled(true)
+            .setLabel("Deny Member From Moderation Team")
+            .setStyle("DANGER");
+          const row = new MessageActionRow().addComponents(
+            acceptButton,
+            denyButton
+          );
+          (interaction.message as Message).edit({ components: [row] });
+          interaction.reply({
+            content: `${member.user.username} has became a trial moderator!`,
+            ephemeral: true,
+          });
+          try {
+            const embed = new MessageEmbed()
+              .setAuthor({
+                name: `Sen Nightcore | Message from ${interaction.member?.user
+                  .username!}`,
+                iconURL: interaction.guild?.iconURL({ dynamic: true })!,
+              })
+              .setDescription(
+                "Congratulations, You've been chosen as a trial moderator on our server (Sen Nightcore), Your actions and permissions usage will be watched by our management team so be carefully in how you use your temp permissions.\nCheck <#783995675645706270> to start talking with the other moderators!"
+              )
+              .setImage(
+                "https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/615e08a57562b757afbe7032_TransparencyReport_BlogHeader.png"
+              )
+              .setTimestamp();
+            await member.send({ embeds: [embed] });
+          } catch {
+            interaction.reply({
+              content: `Could not message ${member.user.username} because their DMS are closed, Someone has to inform them that they got accepted to the staff team!`,
+            });
+          }
+          try {
+            const secretStaffChannel = await client.channels.fetch(
+              "783995675645706270"
+            );
+            if (secretStaffChannel?.isText())
+              await secretStaffChannel.send({
+                content: `@everyone say hi to our new trial moderator ${member.toString()} and wish them the best luck!!!`,
+              });
+          } catch {}
+        } catch (err) {
+          return interaction.reply({
+            content: (err as Error).message,
+            ephemeral: true,
+          });
+        }
+      } else {
+        const acceptButton = new MessageButton()
+          .setCustomId(`SenModAccept_${interaction.member?.user.id}`)
+          .setEmoji("✅")
+          .setDisabled(true)
+          .setLabel(`Accept Member To Moderation Team`)
+          .setStyle("SUCCESS");
+        const denyButton = new MessageButton()
+          .setCustomId(`SenModDeny_${interaction.member?.user.id}`)
+          .setEmoji("❌")
+          .setDisabled(true)
+          .setLabel(
+            `Member got rejected by: ${(interaction.member?.user as User).tag}`
+          )
+          .setStyle("DANGER");
+        const row = new MessageActionRow().addComponents(
+          acceptButton,
+          denyButton
+        );
+        (interaction.message as Message).edit({ components: [row] });
+        interaction.reply({
+          content: `${member.user.username} has been denied from mod application!`,
+          ephemeral: true,
+        });
+      }
+    }
     if (interaction.isCommand()) {
       await interaction.deferReply({ ephemeral: true }).catch(() => {});
 
