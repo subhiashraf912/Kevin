@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2022-08-13 00:04:32.249 ERROR 385088 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /182.235.208.73:57785
 2022-08-13 00:12:16.130 ERROR 385088 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /192.241.222.236:33702
 2022-08-13 00:14:15.958  WARN 385088 --- [XNIO-1 task-10] l.s.config.RequestAuthorizationFilter    : Authorization missing for 185.7.214.117 on GET /actuator/gateway/routes
@@ -7458,3 +7459,171 @@ Caused by: java.lang.IllegalStateException: No match found
 	... 4 common frames omitted
 
 2022-08-13 22:23:27.153  INFO 385088 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"783991881028993045"}
+=======
+2022-06-17 13:01:33.942  INFO 42882 --- [XNIO-1 task-43] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:something just like this"
+2022-06-17 13:01:34.717  INFO 42882 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: something just like this
+2022-06-17 13:01:34.722  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"783991881028993045","volume":100}
+2022-06-17 13:01:34.722  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"play","guildId":"783991881028993045","track":"QAAAqAIAPlRoZSBDaGFpbnNtb2tlcnMgJiBDb2xkcGxheSAtIFNvbWV0aGluZyBKdXN0IExpa2UgVGhpcyAoTHlyaWMpABBUaGUgQ2hhaW5zbW9rZXJzAAAAAAADyMAAC0ZNN01GWW95bFZzAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Rk03TUZZb3lsVnMAB3lvdXR1YmUAAAAAAAAAAA=="}
+2022-06-17 13:01:34.965  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"sessionId":"d0dcee41da566b7a6a3d9fcb9990d744","op":"voiceUpdate","guildId":"783991881028993045","event":{"token":"87cc7c32d10b3224","guild_id":"783991881028993045","endpoint":"bucharest8528.discord.media:443"}}
+2022-06-17 13:03:51.440  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"pause","guildId":"783991881028993045","pause":true}
+2022-06-17 13:03:51.440  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"783991881028993045"}
+2022-06-17 13:03:51.441  INFO 42882 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"sessionId":"d0dcee41da566b7a6a3d9fcb9990d744","op":"voiceUpdate","guildId":"783991881028993045","event":{"token":"87cc7c32d10b3224","guild_id":"783991881028993045","endpoint":"bucharest8528.discord.media:443"}}
+2022-06-17 20:01:39.109  INFO 42882 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"9e084f6440ee0cd39df12183a5808cff","op":"voiceUpdate","guildId":"492369946232225803","event":{"token":"00adf67410279e3e","guild_id":"492369946232225803","endpoint":"milan2005.discord.media:443"}}
+2022-06-17 20:01:39.238  INFO 42882 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"9e084f6440ee0cd39df12183a5808cff","op":"voiceUpdate","guildId":"492369946232225803","event":{"token":"00adf67410279e3e","guild_id":"492369946232225803","endpoint":"milan2005.discord.media:443"}}
+2022-06-17 20:01:39.239  INFO 42882 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"9e084f6440ee0cd39df12183a5808cff","op":"voiceUpdate","guildId":"492369946232225803","event":{"token":"00adf67410279e3e","guild_id":"492369946232225803","endpoint":"milan4931.discord.media:443"}}
+2022-06-17 20:01:53.467  INFO 42882 --- [XNIO-1 task-45] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=NqM032dnPtk"
+2022-06-17 20:01:53.599  INFO 42882 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track DJ Blyatman & Russian Village Boys - Cyka Blyat (Official Music Video)
+2022-06-17 20:01:53.603  INFO 42882 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"492369946232225803","track":"QAAAqwIARkRKIEJseWF0bWFuICYgUnVzc2lhbiBWaWxsYWdlIEJveXMgLSBDeWthIEJseWF0IChPZmZpY2lhbCBNdXNpYyBWaWRlbykAC0RKIEJseWF0bWFuAAAAAAACytgAC05xTTAzMmRuUHRrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9TnFNMDMyZG5QdGsAB3lvdXR1YmUAAAAAAAAAAA=="}
+2022-06-17 20:10:27.377  INFO 42882 --- [XNIO-1 task-47] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=mbxz0ayRaVI"
+2022-06-17 20:10:27.469  INFO 42882 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track I'm Blur (clip by F.Frankenstein)
+2022-06-17 20:10:27.471  INFO 42882 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"play","guildId":"492369946232225803","track":"QAAAiAIAIUknbSBCbHVyIChjbGlwIGJ5IEYuRnJhbmtlbnN0ZWluKQANQ2FuYWxlIGNoaXVzbwAAAAAAAIi4AAttYnh6MGF5UmFWSQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PW1ieHowYXlSYVZJAAd5b3V0dWJlAAAAAAAAAAA="}
+2022-06-17 20:23:31.744  INFO 42882 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"492369946232225803"}
+2022-08-11 20:46:23.931  INFO 7664 --- [main] lavalink.server.Launcher                 : Starting Launcher on AzeSama with PID 7664 (C:\Users\aze\Desktop\Bots\Kevin\src\Bot\Servers\Lavalink\Lavalink.jar started by aze in C:\Users\aze\Desktop\Bots\Kevin\src\Bot\Servers\Lavalink)
+2022-08-11 20:46:23.945  INFO 7664 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-08-11 20:46:24.092  WARN 7664 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-08-11 20:46:24.904  INFO 7664 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.453 seconds (JVM running for 1.862)
+2022-08-11 20:46:24.904  INFO 7664 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-08-11 20:46:24.951  INFO 7664 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        608d24ddb2b7b63d5b4aa23151e8dfa924de5392-SNAPSHOT
+	Build:          1347
+	Build time:     26.05.2022 14:29:26 UTC
+	Branch          walkyst-koe-fork
+	Commit:         608d24d
+	Commit time:    27.04.2022 18:20:57 UTC
+	JVM:            18.0.2
+	Lavaplayer      1.3.98-devoxin
+
+2022-08-11 20:46:24.967  INFO 7664 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-08-11 20:46:25.811  WARN 7664 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-08-11 20:46:25.889  INFO 7664 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-08-11 20:46:25.889  INFO 7664 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 922 ms
+2022-08-11 20:46:25.983  WARN 7664 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-08-11 20:46:26.264  INFO 7664 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-08-11 20:46:26.467  INFO 7664 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows Server 2022, Arch: amd64
+2022-08-11 20:46:26.467  WARN 7664 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2022-08-11 20:46:26.576  INFO 7664 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-11 20:46:26.748  INFO 7664 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-08-11 20:46:26.764  INFO 7664 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-08-11 20:46:26.795  INFO 7664 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8080 (http) with context path ''
+2022-08-11 20:46:26.795  INFO 7664 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.876 seconds (JVM running for 3.751)
+2022-08-11 20:46:40.061  INFO 7664 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-11 20:46:40.061  INFO 7664 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-11 20:46:40.067  INFO 7664 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-08-11 20:46:40.083  INFO 7664 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:50395
+2022-08-11 20:46:40.083  INFO 7664 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:50419
+2022-08-11 20:46:40.145  INFO 7664 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-08-11 20:46:40.145  INFO 7664 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-08-11 20:46:50.217  INFO 7664 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:50434
+2022-08-11 20:46:50.233  INFO 7664 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2022-08-11 20:46:58.733  INFO 7664 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Arash - Broken Angel."
+2022-08-11 20:46:59.601  INFO 7664 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Arash - Broken Angel.
+2022-08-11 20:46:59.664  INFO 7664 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"935269628123447346","volume":100}
+2022-08-11 20:46:59.664  INFO 7664 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"play","guildId":"935269628123447346","track":"QAAAeQIAFEFyYXNoIC0gQnJva2VuIEFuZ2VsAAtQb3dlciBIb3VzZQAAAAAAAxj4AAtiQzNXQXhpTG5EWQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWJDM1dBeGlMbkRZAAd5b3V0dWJlAAAAAAAAAAA="}
+2022-08-11 20:47:00.155 ERROR 7664 --- [lava-daemon-pool-playback-1-thread-1] .s.d.l.s.y.YoutubeSignatureCipherManager : Problematic YouTube player script /s/player/324f67b9/player_ias.vflset/de_DE/base.js detected (issue detected with script: no n function match). Dumped to C:\Users\aze\AppData\Local\Temp\2\lavaplayer-yt-player-script17115350990824721149.js.
+2022-08-11 20:47:00.170 ERROR 7664 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of bC3WAxiLnDY
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:44) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:116) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:348) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.98-devoxin
+  os.arch: amd64
+  os.name: Windows Server 2022
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 18.0.2
+  java.runtime.version: 18.0.2+9-61
+  java.vm.version: 18.0.2+9-61
+Caused by: java.lang.IllegalStateException: No match found
+	at java.base/java.util.regex.Matcher.group(Matcher.java:644) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSignatureCipherManager.extractFromScript(YoutubeSignatureCipherManager.java:243) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeSignatureCipherManager.getExtractedScript(YoutubeSignatureCipherManager.java:160) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadTrackInfoFromInnertube(DefaultYoutubeTrackDetailsLoader.java:197) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.load(DefaultYoutubeTrackDetailsLoader.java:46) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadDetails(DefaultYoutubeTrackDetailsLoader.java:34) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.loadBestFormatWithUrl(YoutubeAudioTrack.java:76) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:42) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[walkyst-lavaplayer-85f4877.jar!/:na]
+	... 4 common frames omitted
+
+2022-08-11 20:47:00.170  INFO 7664 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"935269628123447346"}
+2022-08-11 20:47:00.186  INFO 7664 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"e975b9fedf9327cac67957d8f4c8569c","op":"voiceUpdate","guildId":"935269628123447346","event":{"token":"28122e428e1b8568","guild_id":"935269628123447346","endpoint":"rotterdam2253.discord.media:443"}}
+2022-08-11 20:48:53.233  INFO 7664 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-08-11 20:48:53.233  INFO 7664 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-08-11 20:48:53.246 ERROR 7664 --- [XNIO-1 I/O-3] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:590) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1063) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:978) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:234) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:223) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:228) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:134) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:107) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:494) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+
+2022-08-11 20:48:53.246 ERROR 7664 --- [XNIO-1 I/O-4] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:590) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1063) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:978) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:234) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:223) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:228) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:134) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:107) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:494) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+
+2022-08-11 20:48:53.246 ERROR 7664 --- [XNIO-1 I/O-4] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:590) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1063) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:978) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:234) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:223) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:228) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:134) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:107) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:494) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+
+2022-08-11 20:48:53.246  INFO 7664 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+>>>>>>> 84acef783cf338d6ce09c1457658d6072884f645
