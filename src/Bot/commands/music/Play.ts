@@ -37,6 +37,7 @@ export default class PlayCommand extends BaseCommand {
       try {
         res = await client.erela.search(search, message.author);
       } catch (err: any) {
+        console.log(err)
         return message.reply(
           `There was an error while searching: ${err.message}`
         );
