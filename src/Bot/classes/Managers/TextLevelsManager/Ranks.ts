@@ -1,11 +1,12 @@
 import { Snowflake } from "discord.js";
+import { isArray } from "util";
 import TextLevelsRanksConfiguration from "../../../utils/types/Data/TextLevelsRanksConfiguration";
 import BaseManager from "../../Base/BaseManager";
 import DiscordClient from "../../Client/Client";
 
 type searchDataType = {
   guildId: Snowflake;
-  userId: Snowflake;
+  userId?: Snowflake;
 };
 
 export default class TextLevelRanksManager extends BaseManager<TextLevelsRanksConfiguration> {
@@ -39,22 +40,38 @@ export default class TextLevelRanksManager extends BaseManager<TextLevelsRanksCo
       `${data.guildId}.${data.userId}`
     );
     if (cachedConfiguration) return cachedConfiguration;
-    else return await this.fetch(data);
+    else return (await this.fetch(data)) as TextLevelsRanksConfiguration;
   }
-  async fetch(data: searchDataType): Promise<TextLevelsRanksConfiguration> {
+  async fetch(
+    data: searchDataType
+  ): Promise<TextLevelsRanksConfiguration | TextLevelsRanksConfiguration[]> {
     const { guildId, userId } = data;
-    let configuration =
-      await this.client.database.models.textLevelRanks.findOne(data);
+    let configuration:
+      | TextLevelsRanksConfiguration
+      | TextLevelsRanksConfiguration[]
+      | null;
+    if (userId)
+      configuration = await this.client.database.models.textLevelRanks.findOne(
+        data
+      );
+    else
+      configuration = await this.client.database.models.textLevelRanks.find(
+        data
+      );
     if (!configuration)
       configuration = await this.create({
         guildId,
-        userId,
+        userId: userId!,
         lastMessage: Date.now(),
         level: 0,
         xp: 0,
         rankBackground: null,
       });
-    this.cache.set(`${data.guildId}.${data.userId}`, configuration);
+    if (isArray(configuration))
+      configuration.forEach((el) => {
+        this.cache.set(`${el.guildId}.${el.userId}`, el);
+      });
+    else this.cache.set(`${data.guildId}.${data.userId}`, configuration);
     return configuration;
   }
 }
