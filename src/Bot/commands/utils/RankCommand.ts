@@ -63,18 +63,15 @@ export default class RankCommand extends BaseCommand {
           const attachment = await client.utils.generateRankCard(member!);
           await msg.edit({
             components: [getRow()],
-          });
-          await interaction.reply({
             files: [attachment],
           });
+          // await interaction.reply({
+          //   files: [attachment],
+          // });
           break;
         case "VoiceRank":
           textRankDisabled = false;
           voiceRankDisabled = true;
-
-          await msg.edit({
-            components: [getRow()],
-          });
           const rank = await client.configurations.voiceLevels.ranks.get({
             userId: interaction.user.id,
             guildId: message.guildId!,
@@ -82,7 +79,8 @@ export default class RankCommand extends BaseCommand {
           let { voiceTime, joinTime } = rank;
           const voiceTimeJoinDiff =
             Date.now() - (joinTime ? joinTime : Date.now());
-          await interaction.reply({
+          await msg.edit({
+            components: [getRow()],
             content: "Your voice rank is {rank}".replace(
               "{rank}",
               client.utils.millisToMinutesAndSeconds(
@@ -90,8 +88,17 @@ export default class RankCommand extends BaseCommand {
               )
             ),
           });
+          // await interaction.reply({
+          //   content: "Your voice rank is {rank}".replace(
+          //     "{rank}",
+          //     client.utils.millisToMinutesAndSeconds(
+          //       voiceTime + voiceTimeJoinDiff
+          //     )
+          //   ),
+          // });
           break;
       }
+      interaction.reply({ content: "Updated", ephemeral: true });
     });
   }
 }
