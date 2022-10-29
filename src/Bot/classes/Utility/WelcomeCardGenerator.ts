@@ -1,6 +1,6 @@
 import { GuildMember, MessageAttachment } from "discord.js";
 
-import Canvas from "canvas";
+import { loadImage } from "canvas";
 import Discord from "discord.js";
 import Vibrant from "node-vibrant";
 const Konva = require("konva/cmj").default;
@@ -144,6 +144,6 @@ export default class WelcomeCardGenerator {
     return this.attachment as MessageAttachment;
   }
   async loadImage(src: string) {
-    return await Canvas.loadImage(src);
+    return await loadImage(src);
   }
 }
