@@ -39,11 +39,11 @@ export default class MessageEvent extends BaseEvent {
       }
       const channel = configurations.channel;
       const message = configurations.message;
-      // const attachment1 = new client.utils.WelcomeCardGenerator(member);
-      // const attachment = await attachment1.getAttachment();
+      const attachment1 = new client.utils.WelcomeCardGenerator(member);
+      const attachment = await attachment1.getAttachment();
 
       channel.send({
-        // files: [attachment],
+        files: [attachment],
         content: message
           .replace("{server-name}", member.guild.name)
           .replace("{member-ping}", `<@${member.id}>`)

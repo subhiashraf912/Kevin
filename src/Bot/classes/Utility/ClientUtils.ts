@@ -1,7 +1,7 @@
 import { GuildMember, MessageAttachment, PermissionString } from "discord.js";
 import DiscordClient from "../Client/Client";
 import pagination from "./Pagination";
-// import WelcomeCardGenerator from "./WelcomeCardGenerator";
+import WelcomeCardGenerator from "./WelcomeCardGenerator";
 import KevinCord from "./AzeCord";
 class ClientUtils {
   client;
@@ -10,7 +10,7 @@ class ClientUtils {
   constructor(client: DiscordClient) {
     this.client = client;
   }
-  // WelcomeCardGenerator = WelcomeCardGenerator;
+  WelcomeCardGenerator = WelcomeCardGenerator;
   formatString(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
