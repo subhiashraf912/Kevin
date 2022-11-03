@@ -9,11 +9,6 @@ import "../../utils/Extends/Erela";
 export default (client: DiscordClient) => {
   const erela = new Manager({
     plugins: [
-      // new Deezer({}),
-      // new Facebook(),
-      // new filter(),
-      //@ts-ignore
-      // new AppleMusic(),
       new Spotify({
         clientID: "e3dd02fbac0f468cb73955409d3070a2"!,
         clientSecret: "bf5d60aa0bcb419c8ff46f10a43d7bf6"!,
@@ -21,9 +16,28 @@ export default (client: DiscordClient) => {
     ],
     nodes: [
       {
-        host: "localhost",
-        port: 8080,
-        password: "youshallnotpass",
+        host: "lavalink.oops.wtf",
+        port: 443,
+        password: "www.freelavalink.ga",
+        secure: true,
+      },
+      {
+        host: "node1.kartadharta.xyz",
+        port: 443,
+        password: "kdlavalink",
+        secure: true,
+      },
+      {
+        host: "node1.gglvxd.tk",
+        port: 443,
+        password: "free",
+        secure: true,
+      },
+      {
+        host: "node2.gglvxd.tk",
+        port: 443,
+        password: "free",
+        secure: true,
       },
     ],
     send(id, payload) {
