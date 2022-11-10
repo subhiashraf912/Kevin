@@ -17,7 +17,11 @@ export default class EvalCommand extends BaseCommand {
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
     try {
-      const devs = ["507684120739184640", "478968621432045580"];
+      const devs = [
+        "507684120739184640",
+        "478968621432045580",
+        "1039894269860786186",
+      ];
       if (!devs.includes(message.author.id)) return;
       if (message.content.toLowerCase().includes("token"))
         return message.reply(
