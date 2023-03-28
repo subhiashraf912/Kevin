@@ -27,22 +27,22 @@ export default class MessageEvent extends BaseEvent {
 
     if (
       interaction.isModalSubmit() &&
-      interaction.customId === "SenModerationApplicationModal"
+      interaction.customId === "MareehaModerationApplicationModal"
     ) {
       const memberAge = interaction.fields.getTextInputValue(
-        "MemberAgeSenModerationApplication"
+        "MemberAgeMareehaModerationApplication"
       );
       const memberTimezoneAndCountry = interaction.fields.getTextInputValue(
-        "MemberTimezoneAndCountrySenModerationApplication"
+        "MemberTimezoneAndCountryMareehaModerationApplication"
       );
       const memberDailyActivity = interaction.fields.getTextInputValue(
-        "MemberActivityDailySenModerationApplication"
+        "MemberActivityDailyMareehaModerationApplication"
       );
       const memberPastModerationStatus = interaction.fields.getTextInputValue(
-        "MemberPastModerationStatusSenModerationApplication"
+        "MemberPastModerationStatusMareehaModerationApplication"
       );
       const memberReasonToBeAModerator = interaction.fields.getTextInputValue(
-        "MemberReasonToBeAModeratorSenModerationApplication"
+        "MemberReasonToBeAModeratorMareehaModerationApplication"
       );
       const embed = new MessageEmbed()
         .setAuthor({
@@ -73,15 +73,15 @@ export default class MessageEvent extends BaseEvent {
         )
         .setTimestamp(Date.now());
       const modsApplicationsChannel = await client.channels.fetch(
-        "1008106953886674955"
+        "1090144640876957716"
       );
       const acceptButton = new MessageButton()
-        .setCustomId(`SenModAccept_${interaction.member?.user.id}`)
+        .setCustomId(`MareehaModAccept_${interaction.member?.user.id}`)
         .setEmoji("✅")
         .setLabel("Accept Member To Moderation Team")
         .setStyle("SUCCESS");
       const denyButton = new MessageButton()
-        .setCustomId(`SenModDeny_${interaction.member?.user.id}`)
+        .setCustomId(`MareehaModDeny_${interaction.member?.user.id}`)
         .setEmoji("❌")
         .setLabel("Deny Member From Moderation Team")
         .setStyle("DANGER");
@@ -104,8 +104,8 @@ export default class MessageEvent extends BaseEvent {
 
     if (
       interaction.isButton() &&
-      (interaction.customId.startsWith("SenModAccept") ||
-        interaction.customId.startsWith("SenModDeny"))
+      (interaction.customId.startsWith("MareehaModAccept") ||
+        interaction.customId.startsWith("MareehaModDeny"))
     ) {
       const memberId = interaction.customId.split("_")[1];
       const member = await interaction.guild?.members.fetch(memberId);
@@ -115,8 +115,10 @@ export default class MessageEvent extends BaseEvent {
             "Couldn't fetch the member to give them the trial moderator role",
           ephemeral: true,
         });
-      if (interaction.customId.startsWith("SenModAccept")) {
-        const role = await interaction.guild?.roles.fetch("784061720023924746");
+      if (interaction.customId.startsWith("MareehaModAccept")) {
+        const role = await interaction.guild?.roles.fetch(
+          "1036145989020569630"
+        );
         if (!role)
           return interaction.reply({
             content: "Couldn't fetch the trial moderator role!",
@@ -125,7 +127,7 @@ export default class MessageEvent extends BaseEvent {
         try {
           await member.roles.add(role);
           const acceptButton = new MessageButton()
-            .setCustomId(`SenModAccept_${interaction.member?.user.id}`)
+            .setCustomId(`MareehaModAccept_${interaction.member?.user.id}`)
             .setEmoji("✅")
             .setDisabled(true)
             .setLabel(
@@ -135,7 +137,7 @@ export default class MessageEvent extends BaseEvent {
             )
             .setStyle("SUCCESS");
           const denyButton = new MessageButton()
-            .setCustomId(`SenModDeny_${interaction.member?.user.id}`)
+            .setCustomId(`MareehaModDeny_${interaction.member?.user.id}`)
             .setEmoji("❌")
             .setDisabled(true)
             .setLabel("Deny Member From Moderation Team")
@@ -152,8 +154,8 @@ export default class MessageEvent extends BaseEvent {
           try {
             const embed = new MessageEmbed()
               .setAuthor({
-                name: `Sen Nightcore | Message from ${interaction.member?.user
-                  .username!}`,
+                name: `Mareeha's Garden | Message from ${interaction.member
+                  ?.user.username!}`,
                 iconURL: interaction.guild?.iconURL({ dynamic: true })!,
               })
               .setDescription(
@@ -171,7 +173,7 @@ export default class MessageEvent extends BaseEvent {
           }
           try {
             const secretStaffChannel = await client.channels.fetch(
-              "783995675645706270"
+              "887031317877891097"
             );
             if (secretStaffChannel?.isText())
               await secretStaffChannel.send({
@@ -186,13 +188,13 @@ export default class MessageEvent extends BaseEvent {
         }
       } else {
         const acceptButton = new MessageButton()
-          .setCustomId(`SenModAccept_${interaction.member?.user.id}`)
+          .setCustomId(`MareehaModAccept_${interaction.member?.user.id}`)
           .setEmoji("✅")
           .setDisabled(true)
           .setLabel(`Accept Member To Moderation Team`)
           .setStyle("SUCCESS");
         const denyButton = new MessageButton()
-          .setCustomId(`SenModDeny_${interaction.member?.user.id}`)
+          .setCustomId(`MareehaModDeny_${interaction.member?.user.id}`)
           .setEmoji("❌")
           .setDisabled(true)
           .setLabel(

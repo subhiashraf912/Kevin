@@ -21,9 +21,9 @@ export default class Command extends BaseCommand {
   }
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {
-    if (message.guild?.id !== "783991881028993045")
+    if (message.guild?.id !== "887031317877891094")
       return message.reply({
-        content: "This command is only for Sen Nightcore server!",
+        content: "This command is only for Mareeha's Garden server!",
       });
     const embed = new MessageEmbed()
       .setAuthor({
