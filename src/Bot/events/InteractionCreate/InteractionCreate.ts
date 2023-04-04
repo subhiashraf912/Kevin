@@ -73,7 +73,7 @@ export default class MessageEvent extends BaseEvent {
         )
         .setTimestamp(Date.now());
       const modsApplicationsChannel = await client.channels.fetch(
-        "1090144640876957716"
+        "1090147269233348608"
       );
       const acceptButton = new MessageButton()
         .setCustomId(`MareehaModAccept_${interaction.member?.user.id}`)
@@ -159,7 +159,7 @@ export default class MessageEvent extends BaseEvent {
                 iconURL: interaction.guild?.iconURL({ dynamic: true })!,
               })
               .setDescription(
-                "Congratulations, You've been chosen as a trial moderator on our server (Sen Nightcore), Your actions and permissions usage will be watched by our management team so be carefully in how you use your temp permissions.\nCheck <#783995675645706270> to start talking with the other moderators!"
+                "Congratulations, You've been chosen as a trial moderator on our server (Mareeha's Garden), Your actions and permissions usage will be watched by our management team so be carefully in how you use your temp permissions.\nCheck <#887031317877891097> to start talking with the other moderators!"
               )
               .setImage(
                 "https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/615e08a57562b757afbe7032_TransparencyReport_BlogHeader.png"

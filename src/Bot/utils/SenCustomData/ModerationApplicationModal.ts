@@ -2,7 +2,7 @@ import { MessageActionRow, Modal, TextInputComponent } from "discord.js";
 import { TextInputStyles } from "discord.js/typings/enums";
 
 const memberAgeInput = new TextInputComponent()
-  .setCustomId("MemberAgeSenModerationApplication")
+  .setCustomId("MemberAgeMareehaModerationApplication")
   .setLabel("How old are you?")
   .setMinLength(2)
   .setMaxLength(2)
@@ -12,7 +12,7 @@ const memberAgeInput = new TextInputComponent()
   .setRequired(true);
 
 const memberTimezoneAndCountryInput = new TextInputComponent()
-  .setCustomId("MemberTimezoneAndCountrySenModerationApplication")
+  .setCustomId("MemberTimezoneAndCountryMareehaModerationApplication")
   .setLabel("What is your timezone? also your country?")
   .setPlaceholder("Example: UTC/GMT+7, Vietnam")
   .setRequired(true)
@@ -20,7 +20,7 @@ const memberTimezoneAndCountryInput = new TextInputComponent()
   .setRequired(true);
 
 const memberActivityDailyInput = new TextInputComponent()
-  .setCustomId("MemberActivityDailySenModerationApplication")
+  .setCustomId("MemberActivityDailyMareehaModerationApplication")
   .setLabel("Can you be active at least 2 hours a day?")
   .setMinLength(2)
   .setMaxLength(3)
@@ -30,7 +30,7 @@ const memberActivityDailyInput = new TextInputComponent()
   .setRequired(true);
 
 const memberPastModerationStatusInput = new TextInputComponent()
-  .setCustomId("MemberPastModerationStatusSenModerationApplication")
+  .setCustomId("MemberPastModerationStatusMareehaModerationApplication")
   .setLabel("Do you have previous moderator exp?")
   .setPlaceholder("If yes, can you tell us about your experience?")
   .setRequired(true)
@@ -39,7 +39,7 @@ const memberPastModerationStatusInput = new TextInputComponent()
   .setRequired(true);
 
 const memberReasonToBeAModeratorInput = new TextInputComponent()
-  .setCustomId("MemberReasonToBeAModeratorSenModerationApplication")
+  .setCustomId("MemberReasonToBeAModeratorMareehaModerationApplication")
   .setLabel("Why do you want to be a moderator?")
   .setPlaceholder("Suggestions:\nTell us what you can offer to us.")
   .setRequired(true)
@@ -57,8 +57,8 @@ const actionRows = [
 ].map((textInput) => new MessageActionRow().addComponents(textInput));
 
 const moderationApplicationModal = new Modal()
-  .setTitle("Sen Moderation Application")
-  .setCustomId("SenModerationApplicationModal")
+  .setTitle("Mareeha's Mod Application")
+  .setCustomId("MareehaModerationApplicationModal")
   //@ts-ignore
   .addComponents(actionRows);
 
