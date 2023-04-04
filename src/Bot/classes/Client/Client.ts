@@ -26,7 +26,7 @@ export default class DiscordClient extends Client {
   database = new Database(process.env.MONGO_DB!);
   configurations = new ClientConfiguration(this);
   //@ts-ignore
-  invites = new InviteTracker(this);
+  // invites = new InviteTracker(this);
   messages = new Collection<Snowflake, Message[]>();
 
   erela;
