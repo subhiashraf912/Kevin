@@ -5,6 +5,7 @@ import guildMembersCountUpdateService from "../../services/GuildMembersCountUpda
 
 export default class MessageEvent extends BaseEvent {
   constructor() {
+    //@ts-ignore
     super("guildMemberAddWithInvite");
   }
 

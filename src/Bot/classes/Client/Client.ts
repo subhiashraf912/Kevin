@@ -25,6 +25,7 @@ export default class DiscordClient extends Client {
   utils = new ClientUtils(this);
   database = new Database(process.env.MONGO_DB!);
   configurations = new ClientConfiguration(this);
+  //@ts-ignore
   invites = new InviteTracker(this);
   messages = new Collection<Snowflake, Message[]>();
 
@@ -34,7 +35,6 @@ export default class DiscordClient extends Client {
   constructor(options: ClientOptions) {
     super(options);
     this.erela = Erela(this);
-  
   }
 
   get commands(): Collection<string, BaseCommand> {
