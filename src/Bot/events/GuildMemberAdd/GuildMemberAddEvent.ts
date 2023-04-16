@@ -5,11 +5,10 @@ import guildMembersCountUpdateService from "../../services/GuildMembersCountUpda
 
 export default class MessageEvent extends BaseEvent {
   constructor() {
-    //@ts-ignore
-    super("guildMemberAddWithInvite");
+    super("guildMemberAdd");
   }
 
-  async run(client: DiscordClient, member: GuildMember, invite: Invite) {
+  async run(client: DiscordClient, member: GuildMember) {
     await guildMembersCountUpdateService(client, member);
     if (member.guild.id === "783991881028993045") {
       const lobby = member.guild.channels.cache.get("783991881776234549");
@@ -25,7 +24,9 @@ export default class MessageEvent extends BaseEvent {
       ].get(member.guild.id);
       if (configurations) {
         const { roles } = configurations;
+        console.log(roles)
         if (roles[0]) await member.roles.add(roles);
+        console.log('added roles')
       }
     } catch (err) {
       console.log(err);
@@ -51,11 +52,11 @@ export default class MessageEvent extends BaseEvent {
           .replace("{member-username}", member.user.username)
           .replace("{member-tag}", member.user.tag)
           .replace("{member-count}", member.guild.memberCount.toString())
-          .replace("{invited-by-ping}", invite.inviter?.toString()!)
-          .replace("{invited-by-username}", invite.inviter?.username!)
-          .replace("{invited-by-tag}", invite.inviter?.tag!)
-          .replace("{invite-code}", invite.code)
-          .replace("{invite-uses}", invite.uses?.toString()!),
+        // .replace("{invited-by-ping}", invite.inviter?.toString()!)
+        // .replace("{invited-by-username}", invite.inviter?.username!)
+        // .replace("{invited-by-tag}", invite.inviter?.tag!)
+        // .replace("{invite-code}", invite.code)
+        // .replace("{invite-uses}", invite.uses?.toString()!),
       });
     } catch (err) {
       console.log(err);
